@@ -14,5 +14,7 @@ Basado en la seleccion de emociones y la correlación con la base de datos de li
 
 El usuario puede explorar las recomendaciones y recibir más detalles sobre cada libro.
 
+#Link TP 1 sectores y layout
 
+https://www.bbc.com/mundo/articles/cx037vp22wdo
 

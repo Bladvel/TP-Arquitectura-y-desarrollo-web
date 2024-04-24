@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    font-family: ReithSans, Helvetica, Arial, sans-serif;
+    color: rgb(20, 20, 20);
+    background-color: #f6f6f6;
+}
+
+.banner{
+    background-color: #bc191a;
+    padding: 2% 20%;
+}
+
+nav{
+    padding: 0 20%;
+    background-color: #FFFFFF;
+}
+.navbar_list{
+    list-style-type: none;
+    margin: 0;
+    padding: 2% 0;
+}
+
+.navbar_list li{
+    display: inline-block;
+    padding: 0 2% 1% 0;
+}
+
+.navbar_list li a{
+    color: rgb(20, 20, 20);
+    text-decoration: none;
+}
+
+main{
+    padding: 5% 20%;
+    display: flex;
+}
+
+section{
+    width: 70%;
+    object-position: top;
+}
+
+section h1{
+    margin-top: 0;
+}
+.main_title{
+    font-size: 275%;
+    font-weight: 600;
+}
+
+aside{
+    width: 29%;
+    margin-left: 5%;
+}
+
+aside h3{
+    margin-top: 0;
+}
+.aside_news{
+    background-color: #FFFFFF;
+    font-size: medium;
+    padding: 8%;
+    margin-bottom: 8%;
+}
+
+.aside_content{
+    margin: 0;
+}
+
+.aside_link{
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+}
+
+.aside_link:hover{
+    text-decoration: underline;
+}
+
+.timestamp{
+    font-size: small;
+    margin: 5% 0 0 0;
+}
+
+#img_sudan{
+    object-fit: scale-down;
+    width: 100%;
+}
+
+h5{
+    margin-bottom: 0;
+}
+
+h6{
+    margin-top: 6%;
+}
+
+hr{
+    width: 7%;
+    margin-left: 0;
+}
+
+.img_footer{
+    font-size: small;
+    color: rgb(84, 86, 88);
+    border-left: thin solid;
+    padding-left: 2%;
+}
+
+.aside_container1{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-image: url(ninas.jpg);
+    background-size:cover;
+    background-position: center;
+    margin-bottom: 8%;
+}
+
+.aside_container_text a{
+    color: #FFFFFF;
+}
+
+.aside_container_text{
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    padding:8%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.aside_container2{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-image: url(cientifica.jpg);
+    background-size:cover;
+    background-position: center;
+    margin-bottom: 8%;
+}
