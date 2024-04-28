@@ -1,0 +1,14 @@
+body{
+    background-color: #f6f6ff;
+}
+
+.navbar{
+    background-color: rgb(68,36,71);
+}
+.navbar-brand img {
+    max-height: 40px;
+}
+
+main form{
+    background-color: white;
+}
