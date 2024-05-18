@@ -11,17 +11,53 @@
     <!--
         NAVBAR
     -->
-    <nav class="navbar ">
+    <div class="container-fluid barraDeNavegacion">
+      <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="moodflix-07.png" class="logo" alt="logo moodflix">
-        </a>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-light" type="submit">Buscar</button>
-          </form>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav me-auto">
+              <a href="#" class="nav-link">Emociones</a>
+  
+              <a href="#" class="nav-link">Libros</a>
+      
+              <a href="#" class="nav-link">Peliculas</a>
+            </div>
+          
+            
+            <div class="navbar-nav">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-light" type="submit">Buscar</button>
+              </form>
+                <a href="#" class="nav-link">Registro</a>
+  
+                <a href="#" class="nav-link">Login</a>
+  
+                <a href="#" class="nav-link">
+                  Mis Compras
+                  <img src="Layer_1.svg" alt="">
+                </a>
+  
+            </div>
+          </div>
+
+          
+          
+
         </div>
       </nav>
+    </div>
+
+
+
+
     <!--
         FORM LOGIN
     -->

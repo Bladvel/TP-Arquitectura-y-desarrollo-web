@@ -13,3 +13,34 @@ main form{
     background-color: white;
     margin-top: 8%;
 }
+
+.barraDeNavegacion{
+    background-color: rgb(68,36,71);
+
+}
+
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Comienza con un ancho de 0 */
+    height: 2px; /* Altura del "subrayado" */
+    background-color: #fff; /* Color del "subrayado" */
+    transition: width 0.3s ease; /* Transición suave en el ancho */
+}
+
+.nav-link:hover{
+    color: #fff;
+}
+
+.nav-link:hover::after{
+    color: #fff;
+    width: 100%;
+}
