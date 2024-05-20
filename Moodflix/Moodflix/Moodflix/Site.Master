@@ -63,14 +63,16 @@
                                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                                 <button class="btn btn-light" type="submit">Buscar</button>
                             </div>
-                            <a href="#" class="nav-link ms-2 px-2">Registro</a>
-  
-                            <a href="#" class="nav-link px-2">Login</a>
-  
-                            <a href="#" class="nav-link px-2">
+                            <asp:LinkButton CssClass="nav-link ms-2 px-2" ID="linkRegistro" runat="server" Text="Registro"></asp:LinkButton>
+                            
+                            <asp:LinkButton CssClass="nav-link px-2" ID="linkLogin" runat="server" OnClick="linkLogin_OnClick" Text="Login"></asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link px-2" ID="linkMiscompras" runat="server">
                                 Mis Compras
                                 <img src="Imagenes/Layer_1.svg" alt="">
-                            </a>
+
+                            </asp:LinkButton>
+
+
                         </div>
                         
 

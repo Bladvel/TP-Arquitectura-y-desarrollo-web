@@ -24,20 +24,11 @@
         
             <nav class="navbar navbar-expand-lg navbar-dark ">
                 <div class="container-fluid">
-                   
-                    
-
-                    
-                        <div class="navbar-nav ms-auto">
-                            <asp:LinkButton CssClass="nav-link" ID="linkInitLogin" Text="Registro"  runat="server"> </asp:LinkButton>
-                            <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Log In"  runat="server"> </asp:LinkButton>
-                            
-
-
-                        </div>
-
+                     <div class="navbar-nav ms-auto">
+                        <asp:LinkButton CssClass="nav-link" ID="linkInitLogin" Text="Registro"  runat="server"> </asp:LinkButton>
+                        <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Log In" OnClick="LinkInitRegistro_OnClick"  runat="server"> </asp:LinkButton>
+                    </div>
                 </div>
-
             </nav>
 
         

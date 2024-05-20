@@ -10,7 +10,7 @@
 
         <div class=" row">
             <div class=" col-sm-3">
-                <div class=" card">
+                <div class=" card mb-2">
                     <div class="card-header">
                         Pelicula
                     </div>

@@ -11,70 +11,70 @@ namespace Moodflix
 {
 
 
-    public partial class SiteMaster
+    public partial class LibroOPelicula
     {
 
         /// <summary>
-        /// linkEmociones control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkEmociones;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// linkLibros control.
+        /// linkInitLogin2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkLibros;
+        protected global::System.Web.UI.WebControls.LinkButton linkInitLogin2;
 
         /// <summary>
-        /// linkPeliculas control.
+        /// LinkInitRegistro2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkPeliculas;
+        protected global::System.Web.UI.WebControls.LinkButton LinkInitRegistro2;
 
         /// <summary>
-        /// linkRegistro control.
+        /// homeImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkRegistro;
+        protected global::System.Web.UI.WebControls.Image homeImage;
 
         /// <summary>
-        /// linkLogin control.
+        /// imgbVerPeliculas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkLogin;
+        protected global::System.Web.UI.WebControls.ImageButton imgbVerPeliculas;
 
         /// <summary>
-        /// linkMiscompras control.
+        /// imgbVerLibros control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkMiscompras;
+        protected global::System.Web.UI.WebControls.ImageButton imgbVerLibros;
 
         /// <summary>
-        /// MainContent control.
+        /// imgbVerTodo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.ImageButton imgbVerTodo;
     }
 }

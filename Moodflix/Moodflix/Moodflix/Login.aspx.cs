@@ -7,21 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace Moodflix
 {
-    public partial class Emociones : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void OnClick(object sender, ImageClickEventArgs e)
+        protected void ImageButton1_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("LibroOPelicula.aspx");
+            Response.Redirect("Default.aspx");
         }
 
-        protected void LinkInitRegistro_OnClick(object sender, EventArgs e)
+        protected void Button1_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("Emociones.aspx");
         }
     }
 }

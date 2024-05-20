@@ -29,5 +29,10 @@ namespace Moodflix
         {
             
         }
+
+        protected void linkLogin_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }
