@@ -42,6 +42,15 @@ namespace Moodflix
         protected global::System.Web.UI.WebControls.LinkButton linkPeliculas;
 
         /// <summary>
+        /// PlantillaUserAnonimo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlantillaUserAnonimo;
+
+        /// <summary>
         /// linkRegistro control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,33 @@ namespace Moodflix
         protected global::System.Web.UI.WebControls.LinkButton linkLogin;
 
         /// <summary>
+        /// PlantillaUserRegistrado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlantillaUserRegistrado;
+
+        /// <summary>
+        /// LinkProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkProfile;
+
+        /// <summary>
+        /// ddlActions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlActions;
+
+        /// <summary>
         /// linkMiscompras control.
         /// </summary>
         /// <remarks>
@@ -67,6 +103,15 @@ namespace Moodflix
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton linkMiscompras;
+
+        /// <summary>
+        /// LinkLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkLogout;
 
         /// <summary>
         /// MainContent control.

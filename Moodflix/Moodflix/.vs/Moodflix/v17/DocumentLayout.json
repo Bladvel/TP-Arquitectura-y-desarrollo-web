@@ -3,66 +3,122 @@
   "WorkspaceRootPath": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\moodflix\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\libroopelicula.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\libroopelicula.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\libroopelicula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\libroopelicula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\emociones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\emociones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\moodflix\\emociones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\emociones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\emociones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\estilos\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\estilos\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\moodflix\\emociones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\emociones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\content\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\content\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ED0B21-52E3-4BF1-883D-2D04D2DBDAE7}|DAL\\DAL.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ED0B21-52E3-4BF1-883D-2D04D2DBDAE7}|DAL\\DAL.csproj|solutionrelative:dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EAF5961-1D8D-4256-AFC6-7C7EFFD33C9B}|BE\\BE.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EAF5961-1D8D-4256-AFC6-7C7EFFD33C9B}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\libroopelicula.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\libroopelicula.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\libro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\libro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\libro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\libro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\pelicula.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\pelicula.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\pelicula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\pelicula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EAF5961-1D8D-4256-AFC6-7C7EFFD33C9B}|BE\\BE.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\be\\tipoemocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EAF5961-1D8D-4256-AFC6-7C7EFFD33C9B}|BE\\BE.csproj|solutionrelative:be\\tipoemocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|c:\\users\\dan\\documents\\uai\\5- 1er cuatrimestre 2024\\desarrollo y arquitecturas web\\tp\\moodflix\\moodflix\\moodflix\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{ED826292-9B6E-42F2-B26E-207642406FC7}|Moodflix\\Moodflix.csproj|solutionrelative:moodflix\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "DockedHeight": 277,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "Emociones.aspx",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx",
+              "RelativeDocumentMoniker": "Moodflix\\Emociones.aspx",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx",
+              "RelativeToolTip": "Moodflix\\Emociones.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-02T22:06:54.672Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Emociones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx.cs",
+              "RelativeDocumentMoniker": "Moodflix\\Emociones.aspx.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx.cs",
+              "RelativeToolTip": "Moodflix\\Emociones.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T23:40:13.928Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Style.css",
               "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Estilos\\Style.css",
               "RelativeDocumentMoniker": "Moodflix\\Estilos\\Style.css",
               "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Estilos\\Style.css",
               "RelativeToolTip": "Moodflix\\Estilos\\Style.css",
-              "ViewState": "AQIAADEAAAAAAAAAAAAQwD4AAAAAAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAqwEAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-20T00:11:16.483Z",
+              "WhenOpened": "2024-06-02T18:57:30.615Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -76,85 +132,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "Moodflix\\Login.aspx.cs",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Login.aspx.cs",
-              "RelativeToolTip": "Moodflix\\Login.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T00:17:26.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Login.aspx",
-              "RelativeDocumentMoniker": "Moodflix\\Login.aspx",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Login.aspx",
-              "RelativeToolTip": "Moodflix\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-20T00:02:54.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Emociones.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx.cs",
-              "RelativeDocumentMoniker": "Moodflix\\Emociones.aspx.cs",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx.cs",
-              "RelativeToolTip": "Moodflix\\Emociones.aspx.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAcwBcAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T23:40:13.928Z",
+              "DocumentIndex": 5,
+              "Title": "Site.css",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Content\\Site.css",
+              "RelativeDocumentMoniker": "Moodflix\\Content\\Site.css",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Content\\Site.css",
+              "RelativeToolTip": "Moodflix\\Content\\Site.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-02T23:36:35.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Site.Master",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Site.Master",
-              "RelativeDocumentMoniker": "Moodflix\\Site.Master",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Site.Master",
-              "RelativeToolTip": "Moodflix\\Site.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-19T23:38:03.726Z",
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Content\\bootstrap.css",
+              "RelativeDocumentMoniker": "Moodflix\\Content\\bootstrap.css",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Content\\bootstrap.css",
+              "RelativeToolTip": "Moodflix\\Content\\bootstrap.css",
+              "ViewState": "AQIAADEBAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-02T23:36:08.987Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Site.Master.cs",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Site.Master.cs",
-              "RelativeDocumentMoniker": "Moodflix\\Site.Master.cs",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Site.Master.cs",
-              "RelativeToolTip": "Moodflix\\Site.Master.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAsAAAA",
+              "DocumentIndex": 7,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "Moodflix\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "Moodflix\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T23:37:33.676Z",
+              "WhenOpened": "2024-06-02T23:35:59.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LibroOPelicula.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\LibroOPelicula.aspx.cs",
-              "RelativeDocumentMoniker": "Moodflix\\LibroOPelicula.aspx.cs",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\LibroOPelicula.aspx.cs",
-              "RelativeToolTip": "Moodflix\\LibroOPelicula.aspx.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA5wCEAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T23:34:59.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "LibroOPelicula.aspx",
               "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\LibroOPelicula.aspx",
               "RelativeDocumentMoniker": "Moodflix\\LibroOPelicula.aspx",
@@ -162,33 +179,137 @@
               "RelativeToolTip": "Moodflix\\LibroOPelicula.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-19T22:30:51.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Emociones.aspx",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx",
-              "RelativeDocumentMoniker": "Moodflix\\Emociones.aspx",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Emociones.aspx",
-              "RelativeToolTip": "Moodflix\\Emociones.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-17T22:56:03.413Z",
+              "WhenOpened": "2024-06-02T22:53:25.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Default.aspx",
-              "RelativeDocumentMoniker": "Moodflix\\Default.aspx",
-              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Default.aspx",
-              "RelativeToolTip": "Moodflix\\Default.aspx",
+              "Title": "Site.Master",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Site.Master",
+              "RelativeDocumentMoniker": "Moodflix\\Site.Master",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Site.Master",
+              "RelativeToolTip": "Moodflix\\Site.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-17T20:17:38.186Z",
+              "WhenOpened": "2024-06-02T03:14:16.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MP_Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\DAL\\MP_Usuario.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_Usuario.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\DAL\\MP_Usuario.cs",
+              "RelativeToolTip": "DAL\\MP_Usuario.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T20:49:29.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\BE\\Usuario.cs",
+              "RelativeDocumentMoniker": "BE\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\BE\\Usuario.cs",
+              "RelativeToolTip": "BE\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T20:52:06.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Libro.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Libro.aspx.cs",
+              "RelativeDocumentMoniker": "Moodflix\\Libro.aspx.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Libro.aspx.cs",
+              "RelativeToolTip": "Moodflix\\Libro.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T19:00:07.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Pelicula.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Pelicula.aspx.cs",
+              "RelativeDocumentMoniker": "Moodflix\\Pelicula.aspx.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Pelicula.aspx.cs",
+              "RelativeToolTip": "Moodflix\\Pelicula.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T18:23:02.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Pelicula.aspx",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Pelicula.aspx",
+              "RelativeDocumentMoniker": "Moodflix\\Pelicula.aspx",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Pelicula.aspx",
+              "RelativeToolTip": "Moodflix\\Pelicula.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-02T18:09:35.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LibroOPelicula.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\LibroOPelicula.aspx.cs",
+              "RelativeDocumentMoniker": "Moodflix\\LibroOPelicula.aspx.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\LibroOPelicula.aspx.cs",
+              "RelativeToolTip": "Moodflix\\LibroOPelicula.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T19:19:44.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Registrarse.aspx",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Registrarse.aspx",
+              "RelativeDocumentMoniker": "Moodflix\\Registrarse.aspx",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Registrarse.aspx",
+              "RelativeToolTip": "Moodflix\\Registrarse.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-02T03:04:16.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Libro.aspx",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Libro.aspx",
+              "RelativeDocumentMoniker": "Moodflix\\Libro.aspx",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\Moodflix\\Libro.aspx",
+              "RelativeToolTip": "Moodflix\\Libro.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-02T18:13:00.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TipoEmocion.cs",
+              "DocumentMoniker": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\BE\\TipoEmocion.cs",
+              "RelativeDocumentMoniker": "BE\\TipoEmocion.cs",
+              "ToolTip": "C:\\Users\\Dan\\Documents\\UAI\\5- 1er Cuatrimestre 2024\\Desarrollo y arquitecturas web\\TP\\Moodflix\\Moodflix\\BE\\TipoEmocion.cs",
+              "RelativeToolTip": "BE\\TipoEmocion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T18:25:55.85Z",
               "EditorCaption": ""
             }
           ]

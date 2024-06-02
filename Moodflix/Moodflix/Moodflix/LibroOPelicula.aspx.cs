@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,26 +12,55 @@ namespace Moodflix
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+                SetNavbar();
         }
+
+        void SetNavbar()
+        {
+            if (User != null && User.Identity.IsAuthenticated)
+            {
+                PlantillaUserAnonimo.Visible = false;
+                PlantillaUserRegistrado.Visible = true;
+                LinkProfile.Text = User.Identity.Name;
+            }
+            else
+            {
+                PlantillaUserAnonimo.Visible = true;
+                PlantillaUserRegistrado.Visible = false;
+            }
+        }
+
 
         protected void imgbVerPeliculas_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Pelicula.aspx");
         }
 
         protected void imgbVerLibros_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Libro.aspx");
         }
 
         protected void imgbVerTodo_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Pelicula.aspx");
         }
 
-        protected void LinkInitRegistro2_OnClick(object sender, EventArgs e)
+
+        protected void linkInitLogin_OnClick(object sender, EventArgs e)
         {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void LinkInitRegistro_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Registrarse.aspx");
+        }
+
+        protected void LinkLogout_OnClick(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
             Response.Redirect("Login.aspx");
         }
     }

@@ -63,14 +63,58 @@
                                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                                 <button class="btn btn-light" type="submit">Buscar</button>
                             </div>
-                            <asp:LinkButton CssClass="nav-link ms-2 px-2" ID="linkRegistro" runat="server" Text="Registro"></asp:LinkButton>
                             
-                            <asp:LinkButton CssClass="nav-link px-2" ID="linkLogin" runat="server" OnClick="linkLogin_OnClick" Text="Login"></asp:LinkButton>
-                            <asp:LinkButton CssClass="nav-link px-2" ID="linkMiscompras" runat="server">
-                                Mis Compras
-                                <img src="Imagenes/Layer_1.svg" alt="">
+                            <asp:PlaceHolder ID="PlantillaUserAnonimo" runat="server">
+                                <asp:LinkButton CssClass="nav-link ms-2 px-2" ID="linkRegistro" runat="server" OnClick="linkRegistro_OnClick" Text="Registro"></asp:LinkButton>
+                            
+                                <asp:LinkButton CssClass="nav-link px-2" ID="linkLogin" runat="server" OnClick="linkLogin_OnClick" Text="Login"></asp:LinkButton>
+                            </asp:PlaceHolder>
+                            
+                            <asp:PlaceHolder ID="PlantillaUserRegistrado" runat="server">
+                                
+                                <asp:LinkButton CssClass="nav-link" ID="LinkProfile" runat="server"></asp:LinkButton>
 
-                            </asp:LinkButton>
+                                <asp:DropDownList ID="ddlActions" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="">
+                                    <asp:ListItem Text="Herramientas" Value="" />
+                                    <asp:ListItem Text="Bitacora" Value="Action1" />
+                                    <asp:ListItem Text="ABM" Value="Action2" />
+                                 
+                                </asp:DropDownList>
+<%--                                
+                                
+                                <div class="nav-item dropdown">
+                                    <asp:LinkButton ID="DropdownMenuButton" runat="server" CssClass="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown
+                                    </asp:LinkButton>
+                                    <div class="dropdown-menu" aria-labelledby="DropdownMenuButton">
+                                        <asp:LinkButton ID="Action1" runat="server" CssClass="dropdown-item">Action 1</asp:LinkButton>
+                                        <asp:LinkButton ID="Action2" runat="server" CssClass="dropdown-item">Action 2</asp:LinkButton>
+                                        <asp:LinkButton ID="Action3" runat="server" CssClass="dropdown-item">Action 3</asp:LinkButton>
+                                    </div>
+                                </div>
+                                --%>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+
+                                <asp:LinkButton CssClass="nav-link px-2" ID="linkMiscompras" runat="server">
+                                    Mis Compras
+                                    <img src="Imagenes/Layer_1.svg" alt="">
+                                </asp:LinkButton>
+                                
+                                <asp:LinkButton CssClass="nav-link" ID="LinkLogout" Text="Log out" OnClick="LinkLogout_OnClick" runat="server"></asp:LinkButton>
+                            </asp:PlaceHolder>
+
+                            
+
 
 
                         </div>

@@ -18,11 +18,32 @@
 </head>
 <body class=" background-emociones">
     <form id="form1" runat="server">
+        
+
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
                 <div class="navbar-nav ms-auto">
-                    <asp:LinkButton CssClass="nav-link" ID="linkInitLogin2" Text="Registro"  runat="server"> </asp:LinkButton>
-                    <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro2" Text="Log In" OnClick="LinkInitRegistro2_OnClick" runat="server"> </asp:LinkButton>
+                    <asp:PlaceHolder ID="PlantillaUserAnonimo" runat="server">
+                        <asp:LinkButton CssClass="nav-link" ID="linkInitLogin" Text="Log in" OnClick="linkInitLogin_OnClick" runat="server"> </asp:LinkButton>
+                        <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Registro" OnClick="LinkInitRegistro_OnClick"  runat="server"> </asp:LinkButton>
+
+                    </asp:PlaceHolder>
+                             
+                    <asp:PlaceHolder ID="PlantillaUserRegistrado" runat="server">
+                        <asp:LinkButton CssClass="nav-link" ID="LinkProfile" runat="server"></asp:LinkButton>
+                        
+                        
+                        <asp:DropDownList ID="ddlActions" runat="server" CssClass="ddlHerramientas" AutoPostBack="true">
+                            <asp:ListItem Text="Herramientas" Value="" />
+                            <asp:ListItem Text="Bitacora" Value="Action1" />
+                            <asp:ListItem Text="ABM" Value="Action2" />
+                                 
+                        </asp:DropDownList>
+                        
+                        
+
+                        <asp:LinkButton CssClass="nav-link" ID="LinkLogout" Text="Log out" OnClick="LinkLogout_OnClick" runat="server"></asp:LinkButton>
+                    </asp:PlaceHolder>
                 </div>
             </div>
         </nav>

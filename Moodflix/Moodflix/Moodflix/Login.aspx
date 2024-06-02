@@ -18,25 +18,31 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <asp:ImageButton ID="ImageButton1" CssClass="logo" ImageUrl="Imagenes/moodflix-07.png" Width="200px" OnClick="ImageButton1_OnClick" runat="server" />
                 </a>
                 <div class="navbar-nav ms-auto">
-                    <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Registrarse"  runat="server"> </asp:LinkButton>
+                    <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Registrarse" OnClick="LinkInitRegistro_OnClick" runat="server"> </asp:LinkButton>
                 </div>
             </div>
         </nav>
+        <!-- CONTENT -->
         
+        
+        
+
         <main >
             <div class="container  rounded shadow p-3 w-25 my-5">
                 <div class=" row">
                     <label class="form-label">Email</label>
                 </div>
                 <div class=" mx-1 mb-3 row ">
-   
-                        <asp:TextBox ID="txtEmail" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
+                    <input type="email" id="txtEmail" class="form-control inputTextBox" runat="server" required/>
+                    
 
 
                 </div>
@@ -47,7 +53,8 @@
                     <label  class="form-label col">Contraseña</label>
                 </div>
                 <div class=" mx-1 mb-3 row">
-                        <asp:TextBox ID="txtPassword" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
+                        <input type="password" id="txtPassword" class="form-control inputTextBox" runat="server" required/>
+                        
                 </div>
 
                 
