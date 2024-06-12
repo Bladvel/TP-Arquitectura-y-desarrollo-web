@@ -13,8 +13,12 @@ namespace Moodflix
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
+            {
                 SetNavbar();
+
+            }
+                
         }
 
         void SetNavbar()

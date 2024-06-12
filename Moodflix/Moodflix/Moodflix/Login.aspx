@@ -64,6 +64,11 @@
 
                     
                 </div>
+                <div class="row my-1">
+                    <asp:Panel ID="pnlErrorMessage" runat="server" CssClass="alert alert-danger" Visible="false">
+                        <asp:Label ID="lblErrorMessage" runat="server"></asp:Label>
+                    </asp:Panel>
+                </div>
                 
             </div>
 
@@ -74,5 +79,8 @@
         
 
     </form>
+<asp:PlaceHolder runat="server">
+    <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+</asp:PlaceHolder>
 </body>
 </html>

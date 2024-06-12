@@ -26,6 +26,7 @@ namespace DAL
             bitacora.Fecha = DateTime.Parse(dr["FECHA"].ToString());
             bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo), dr["MODULO"].ToString());
             bitacora.Operacion = (TipoOperacion)Enum.Parse(typeof(TipoOperacion), dr["OPERACION"].ToString());
+            bitacora.User = new Usuario();
             bitacora.User.ID = int.Parse(dr["ID_USUARIO"].ToString());
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -57,10 +58,70 @@ namespace Moodflix
             Response.Redirect("Registrarse.aspx");
         }
 
+
+
+        public string ObtenerNombreDePagina()
+        {
+ 
+            string url = Request.Url.AbsolutePath;
+            System.IO.FileInfo fileInfo = new System.IO.FileInfo(url);
+            string nombre = fileInfo.Name;
+
+            if (nombre.EndsWith(".aspx", StringComparison.OrdinalIgnoreCase))
+            {
+                nombre = nombre.Substring(0, nombre.Length - 5);
+            }
+
+            return nombre;
+        }
+
+
+
+
+
+
+
+
+        private BLL.Bitacora bllBitacora = new BLL.Bitacora();
+        BLL.Usuario bllUsuario = new BLL.Usuario();
         protected void LinkLogout_OnClick(object sender, EventArgs e)
         {
+
+            Services.Bitacora bitacora = new Services.Bitacora();
+            bitacora.User = bllUsuario.GetUserByUsername(HttpContext.Current.User.Identity.Name);
+            bitacora.Fecha = DateTime.Now;
+            bitacora.Operacion = TipoOperacion.Logout;
+            bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo),ObtenerNombreDePagina());
+
+            bllBitacora.Insertar(bitacora);
+
+
             FormsAuthentication.SignOut();
+
+            //Agregar en bitacora el cierre de sesion.
+
             Response.Redirect("Login.aspx");
+        }
+
+        protected void ddlActions_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = ddlActions.SelectedValue;
+
+            // Realizar acciones basadas en el valor seleccionado
+            switch (selectedValue)
+            {
+                case "Bitacora":
+                    // Redirigir a la página de Bitácora
+                    Response.Redirect("Bitacora.aspx");
+                    break;
+                case "ABM":
+                    // Redirigir a la página de ABM
+                    Response.Redirect("ABM.aspx");
+                    break;
+                default:
+                    // Manejar caso por defecto si es necesario
+                    break;
+            }
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Moodflix
 
         protected void imgbVerPeliculas_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Pelicula.aspx");
+            Response.Redirect("Peliculas.aspx");
         }
 
         protected void imgbVerLibros_OnClick(object sender, ImageClickEventArgs e)

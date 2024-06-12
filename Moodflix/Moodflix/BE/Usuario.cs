@@ -14,5 +14,10 @@ namespace BE
 
         public string Username { get; set; }
         public int ID { get; set; }
+
+        public override string ToString()
+        {
+            return Email;
+        }
     }
 }

@@ -12,7 +12,8 @@ namespace Services
         Emociones,
         Peliculas,
         Libros,
-        Ambos
+        Ambos,
+        Bitacora,
 
     }
 }

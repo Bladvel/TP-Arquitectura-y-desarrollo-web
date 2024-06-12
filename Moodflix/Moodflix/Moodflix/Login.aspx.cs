@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BE;
+using Services;
 
 namespace Moodflix
 {
@@ -13,7 +14,7 @@ namespace Moodflix
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void ImageButton1_OnClick(object sender, ImageClickEventArgs e)
@@ -22,6 +23,7 @@ namespace Moodflix
         }
 
         BLL.Usuario bllUsuario = new BLL.Usuario();
+        private BLL.Bitacora bllBitacora = new BLL.Bitacora();
 
         protected void Button1_OnClick(object sender, EventArgs e)
         {
@@ -32,18 +34,49 @@ namespace Moodflix
             user.Email = email;
             user.Password = password;
 
-            if (bllUsuario.ValidarUsuario(user))
+            try
             {
-                
-                FormsAuthentication.SetAuthCookie("admin", false);
-                
-                string returnUrl = Request.QueryString["ReturnUrl"];
-                if (string.IsNullOrEmpty(returnUrl))
+                if (bllUsuario.ValidarUsuario(user))
                 {
-                    returnUrl = "~/Emociones.aspx";
+                    var savedUser = bllUsuario.GetUser(user.Email);
+
+                    FormsAuthentication.SetAuthCookie(savedUser.Username, false);
+
+                    string returnUrl = Request.QueryString["ReturnUrl"];
+                    if (string.IsNullOrEmpty(returnUrl))
+                    {
+                        returnUrl = "~/Emociones.aspx";
+                    }
+
+                    Services.Bitacora bitacora = new Services.Bitacora();
+
+                    bitacora.User = savedUser;
+                    bitacora.Fecha = DateTime.Now;
+                    bitacora.Operacion = TipoOperacion.Login;
+                    bitacora.Modulo = TipoModulo.InicioSesion;
+
+                    bllBitacora.Insertar(bitacora);
+
+                    Response.Redirect(returnUrl);
                 }
-                Response.Redirect(returnUrl);
             }
+            catch (LoginException exception)
+            {
+                switch (exception.Result)
+                {
+                    case LoginResult.InvalidEmail:
+                        lblErrorMessage.Text = "El email es incorrecto";
+                        pnlErrorMessage.Visible = true;
+                        break;
+                    case LoginResult.InvalidPassword:
+                        lblErrorMessage.Text = "La contraseña es incorrecta";
+                        pnlErrorMessage.Visible = true;
+                        break;
+
+                }
+            }
+
+            
 
             
         }
