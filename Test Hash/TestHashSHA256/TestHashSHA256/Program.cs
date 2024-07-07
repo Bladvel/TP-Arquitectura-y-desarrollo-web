@@ -12,7 +12,7 @@ namespace TestHashSHA256
         static void Main(string[] args)
         {
 
-            string original = "admin";
+            string original = "dan";
             string hash = Hash256(original);
 
             Console.WriteLine(original);

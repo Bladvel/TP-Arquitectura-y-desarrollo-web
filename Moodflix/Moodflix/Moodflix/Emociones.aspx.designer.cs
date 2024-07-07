@@ -69,13 +69,40 @@ namespace Moodflix
         protected global::System.Web.UI.WebControls.LinkButton LinkProfile;
 
         /// <summary>
-        /// ddlActions control.
+        /// PlantillaWebmaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlActions;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlantillaWebmaster;
+
+        /// <summary>
+        /// ddlWebmaster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlWebmaster;
+
+        /// <summary>
+        /// PlantillaAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlantillaAdmin;
+
+        /// <summary>
+        /// ddlActionsAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlActionsAdmin;
 
         /// <summary>
         /// LinkLogout control.
@@ -87,111 +114,12 @@ namespace Moodflix
         protected global::System.Web.UI.WebControls.LinkButton LinkLogout;
 
         /// <summary>
-        /// btnEmocion1 control.
+        /// emotionsContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion1;
-
-        /// <summary>
-        /// btnEmocion2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion2;
-
-        /// <summary>
-        /// btnEmocion3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion3;
-
-        /// <summary>
-        /// btnEmocion4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion4;
-
-        /// <summary>
-        /// btnEmocion5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion5;
-
-        /// <summary>
-        /// btnEmocion6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion6;
-
-        /// <summary>
-        /// btnEmocion7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion7;
-
-        /// <summary>
-        /// btnEmocion8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion8;
-
-        /// <summary>
-        /// btnEmocion9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion9;
-
-        /// <summary>
-        /// btnEmocion10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion10;
-
-        /// <summary>
-        /// btnEmocion11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion11;
-
-        /// <summary>
-        /// btnEmocion12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnEmocion12;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emotionsContainer;
     }
 }

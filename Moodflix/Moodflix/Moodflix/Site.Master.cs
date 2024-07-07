@@ -24,6 +24,22 @@ namespace Moodflix
                 PlantillaUserAnonimo.Visible = false;
                 PlantillaUserRegistrado.Visible = true;
                 LinkProfile.Text = HttpContext.Current.User.Identity.Name;
+
+                switch (HttpContext.Current.User.Identity.Name)
+                {
+                    case "admin":
+                        PlantillaAdmin.Visible = true;
+                        PlantillaWebmaster.Visible = false;
+                        break;
+                    case "webmaster":
+                        PlantillaWebmaster.Visible = true;
+                        PlantillaAdmin.Visible = false;
+                        break;
+                    default:
+                        PlantillaAdmin.Visible = false;
+                        PlantillaWebmaster.Visible = false;
+                        break;
+                }
             }
             else
             {
@@ -39,7 +55,7 @@ namespace Moodflix
 
         protected void linkLibros_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("Libro.aspx");
+            Response.Redirect("Libros.aspx");
         }
 
 
@@ -105,21 +121,23 @@ namespace Moodflix
 
         protected void ddlActions_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedValue = ddlActions.SelectedValue;
+            DropDownList ddl = (DropDownList)sender;
 
-            // Realizar acciones basadas en el valor seleccionado
+            string selectedValue = ddl.SelectedValue;
+
+
             switch (selectedValue)
             {
                 case "Bitacora":
-                    // Redirigir a la página de Bitácora
+                    
                     Response.Redirect("Bitacora.aspx");
                     break;
                 case "ABM":
-                    // Redirigir a la página de ABM
+                    
                     Response.Redirect("ABM.aspx");
                     break;
                 default:
-                    // Manejar caso por defecto si es necesario
+                    
                     break;
             }
         }

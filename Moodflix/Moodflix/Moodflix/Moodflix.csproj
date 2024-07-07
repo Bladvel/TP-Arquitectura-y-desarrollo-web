@@ -120,8 +120,95 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Imagenes\Libros\exorcista.png" />
-    <Content Include="Libro.aspx" />
+    <Content Include="Imagenes\Libros\AscoYTemorElControlCulturalDeLasEmociones.jpg" />
+    <Content Include="Imagenes\Libros\CienAñosDeSoledad.jpg" />
+    <Content Include="Imagenes\Libros\ComoAguaParaChocolate.jpg" />
+    <Content Include="Imagenes\Libros\CronicasMarcianas.jpg" />
+    <Content Include="Imagenes\Libros\ElAmorEnLosTiemposDeCólera.jpg" />
+    <Content Include="Imagenes\Libros\ElAnimalQueCocinaUnaHistoriaNaturalDelAsco.jpg" />
+    <Content Include="Imagenes\Libros\ElArteDeLaFelicidad.jpg" />
+    <Content Include="Imagenes\Libros\ElArteDeNoAmargarseEnLaVida.jpg" />
+    <Content Include="Imagenes\Libros\ElCuriosoIncidenteDelPerroAMediano.jpg" />
+    <Content Include="Imagenes\Libros\ElEnojoDelTrabajoEsteategiasParaManejarElEnojoLaboral.jpg.jpg" />
+    <Content Include="Imagenes\Libros\ElExorcista.jpg" />
+    <Content Include="Imagenes\Libros\ElGenUnaHistoriaIntima.jpg" />
+    <Content Include="Imagenes\Libros\ElHombreEnBuscaDeSentido.jpg" />
+    <Content Include="Imagenes\Libros\ElLibroDeLaCuriosidad.jpg" />
+    <Content Include="Imagenes\Libros\ElManejoDelEnojoUnaGuiaParaHombres.jpg" />
+    <Content Include="Imagenes\Libros\ElMiedoALaLibertad.jpg" />
+    <Content Include="Imagenes\Libros\ElMonstruoDeColores.jpg" />
+    <Content Include="Imagenes\Libros\ElPequeñoLibroDelEnojo.jpg" />
+    <Content Include="Imagenes\Libros\ElPoderDelAhora.jpg" />
+    <Content Include="Imagenes\Libros\ElPoderDeLaMente.jpg" />
+    <Content Include="Imagenes\Libros\ElResplandor.jpg" />
+    <Content Include="Imagenes\Libros\ElUniversoEnTuMano.jpg" />
+    <Content Include="Imagenes\Libros\EnojoUnaGuiaParaLosCuidadores.jpg" />
+    <Content Include="Imagenes\Libros\Kryptonita.jpg" />
+    <Content Include="Imagenes\Libros\LaAruitecturaDeLaFelicidad.jpg" />
+    <Content Include="Imagenes\Libros\LaCampanaDeCrsital.jpg" />
+    <Content Include="Imagenes\Libros\LaCienciaDeLaFelicidad.jpg" />
+    <Content Include="Imagenes\Libros\LaFelicidadEsElCamino.jpg" />
+    <Content Include="Imagenes\Libros\LaInsoportableLevedadDelSer.jpg" />
+    <Content Include="Imagenes\Libros\LaLentitudDelMundo.jpg" />
+    <Content Include="Imagenes\Libros\LaMagiaDelPensamientoPositivo.jpg" />
+    <Content Include="Imagenes\Libros\LaParadojaDelDisgustoSobreLaRepulsionYLaFascinacion.jpg" />
+    <Content Include="Imagenes\Libros\LaSabiduriaDelEnojo.jpg" />
+    <Content Include="Imagenes\Libros\LaSombraDelViento.jpg" />
+    <Content Include="Imagenes\Libros\LasVentajasDeSerUnMarginado.jpg" />
+    <Content Include="Imagenes\Libros\LaTrampaDeLaFelicidad.jpg" />
+    <Content Include="Imagenes\Libros\MiPlantaDeNaranjaLima.jpg" />
+    <Content Include="Imagenes\Libros\Misery.jpg" />
+    <Content Include="Imagenes\Libros\MujeresQueCorrenConLosLobos.jpg" />
+    <Content Include="Imagenes\Libros\OptimismoAprendido.jpg" />
+    <Content Include="Imagenes\Libros\Rayuela.jpg" />
+    <Content Include="Imagenes\Libros\ResultadosExtraordinarios.jpg" />
+    <Content Include="Imagenes\Libros\SapiensDeAnimalesADioses.jpg" />
+    <Content Include="Imagenes\Libros\VivierSinMiegoElCaminoDeLaLibertad.jpg" />
+    <Content Include="Imagenes\Peliculas\AmericanBeauty.jpg" />
+    <Content Include="Imagenes\Peliculas\BajoLaMismaEstrella.jpg" />
+    <Content Include="Imagenes\Peliculas\CantandoBajoLaLluvia.jpg" />
+    <Content Include="Imagenes\Peliculas\Carancho.jpg" />
+    <Content Include="Imagenes\Peliculas\ComerRezarAmar.jpg" />
+    <Content Include="Imagenes\Peliculas\CorazonDeLeon.jpg" />
+    <Content Include="Imagenes\Peliculas\DiarioDeUnaPasion.jpg" />
+    <Content Include="Imagenes\Peliculas\ElCienPiesHumano.jpg" />
+    <Content Include="Imagenes\Peliculas\ElClubDeLaPelea.jpg" />
+    <Content Include="Imagenes\Peliculas\ElJuegoDelMiedo.jpg" />
+    <Content Include="Imagenes\Peliculas\ElPerfumeHistoriaDeUnAsesino.jpg" />
+    <Content Include="Imagenes\Peliculas\ElPianista.jpg" />
+    <Content Include="Imagenes\Peliculas\ElSecretoDeSusOjos.jpg" />
+    <Content Include="Imagenes\Peliculas\ElSextoSentido.jpg" />
+    <Content Include="Imagenes\Peliculas\EnBuscaDeLaFelicidad.jpg" />
+    <Content Include="Imagenes\Peliculas\FallingDown.jpg" />
+    <Content Include="Imagenes\Peliculas\ForrestGump.jpg" />
+    <Content Include="Imagenes\Peliculas\Her.jpg" />
+    <Content Include="Imagenes\Peliculas\Hereditary.jpg" />
+    <Content Include="Imagenes\Peliculas\Intensamente.jpg" />
+    <Content Include="Imagenes\Peliculas\Interstelar.jpg" />
+    <Content Include="Imagenes\Peliculas\Invictus.jpg" />
+    <Content Include="Imagenes\Peliculas\LaListaDeSchindler.jpg" />
+    <Content Include="Imagenes\Peliculas\LaPielQueHabito.jpg" />
+    <Content Include="Imagenes\Peliculas\LaSonrisaDeLaMonaLisa.jpg" />
+    <Content Include="Imagenes\Peliculas\LaVidaEsBella.jpg" />
+    <Content Include="Imagenes\Peliculas\LosOtros.jpg" />
+    <Content Include="Imagenes\Peliculas\LostInTranslation.jpg" />
+    <Content Include="Imagenes\Peliculas\Martyrs.jpg" />
+    <Content Include="Imagenes\Peliculas\MiPobreAngelito.jpg" />
+    <Content Include="Imagenes\Peliculas\OfficeSpace.jpg" />
+    <Content Include="Imagenes\Peliculas\PanicRoom.jpg" />
+    <Content Include="Imagenes\Peliculas\Psicosis.jpg" />
+    <Content Include="Imagenes\Peliculas\RealmenteAmor.jpg" />
+    <Content Include="Imagenes\Peliculas\RelatosSalvajes.jpg" />
+    <Content Include="Imagenes\Peliculas\Requiem.jpg" />
+    <Content Include="Imagenes\Peliculas\Seven.jpg" />
+    <Content Include="Imagenes\Peliculas\TaxiDriver.jpg" />
+    <Content Include="Imagenes\Peliculas\TheMatrix.jpg" />
+    <Content Include="Imagenes\Peliculas\ThePrestige.jpg" />
+    <Content Include="Imagenes\Peliculas\TheTrumanShow.jpg" />
+    <Content Include="Imagenes\Peliculas\Titanic.jpg" />
+    <Content Include="Imagenes\Peliculas\TopGunMaverick.jpg" />
+    <Content Include="Imagenes\Peliculas\TristeSanValentin.jpg" />
+    <Content Include="Libros.aspx" />
     <Content Include="Peliculas.aspx" />
     <Content Include="Emociones.aspx" />
     <Content Include="Estilos\Layer_1.svg" />
@@ -133,7 +220,6 @@
     <Content Include="Imagenes\Emociones\Enojo.png" />
     <Content Include="Imagenes\Emociones\Felicidad.png" />
     <Content Include="Imagenes\Libros.png" />
-    <Content Include="Imagenes\Peliculas\matrix.jpg" />
     <Content Include="Estilos\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -221,12 +307,12 @@
     <Compile Include="Bitacora.aspx.designer.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Libro.aspx.cs">
-      <DependentUpon>Libro.aspx</DependentUpon>
+    <Compile Include="Libros.aspx.cs">
+      <DependentUpon>Libros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Libro.aspx.designer.cs">
-      <DependentUpon>Libro.aspx</DependentUpon>
+    <Compile Include="Libros.aspx.designer.cs">
+      <DependentUpon>Libros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Peliculas.aspx.cs">
       <DependentUpon>Peliculas.aspx</DependentUpon>

@@ -23,6 +23,24 @@ namespace Moodflix
                 PlantillaUserAnonimo.Visible = false;
                 PlantillaUserRegistrado.Visible = true;
                 LinkProfile.Text = User.Identity.Name;
+
+                switch (User.Identity.Name)
+                {
+                    case "admin":
+                        PlantillaAdmin.Visible = true;
+                        PlantillaWebmaster.Visible = false;
+                        break;
+                    case "webmaster":
+                        PlantillaWebmaster.Visible = true;
+                        PlantillaAdmin.Visible = false;
+                        break;
+                    default:
+                        PlantillaAdmin.Visible = false;
+                        PlantillaWebmaster.Visible = false;
+                        break;
+                }
+
+
             }
             else
             {
@@ -39,7 +57,7 @@ namespace Moodflix
 
         protected void imgbVerLibros_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Libro.aspx");
+            Response.Redirect("Libros.aspx");
         }
 
         protected void imgbVerTodo_OnClick(object sender, ImageClickEventArgs e)
@@ -62,6 +80,29 @@ namespace Moodflix
         {
             FormsAuthentication.SignOut();
             Response.Redirect("Login.aspx");
+        }
+
+        protected void ddlActions_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropDownList ddl = (DropDownList)sender;
+
+            string selectedValue = ddl.SelectedValue;
+
+
+            switch (selectedValue)
+            {
+                case "Bitacora":
+
+                    Response.Redirect("Bitacora.aspx");
+                    break;
+                case "ABM":
+
+                    Response.Redirect("ABM.aspx");
+                    break;
+                default:
+
+                    break;
+            }
         }
     }
 }

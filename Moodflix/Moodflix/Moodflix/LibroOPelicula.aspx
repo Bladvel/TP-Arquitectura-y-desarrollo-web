@@ -33,12 +33,24 @@
                         <asp:LinkButton CssClass="nav-link" ID="LinkProfile" runat="server"></asp:LinkButton>
                         
                         
-                        <asp:DropDownList ID="ddlActions" runat="server" CssClass="ddlHerramientas" AutoPostBack="true">
-                            <asp:ListItem Text="Herramientas" Value="" />
-                            <asp:ListItem Text="Bitacora" Value="Action1" />
-                            <asp:ListItem Text="ABM" Value="Action2" />
+                        
+                        <asp:PlaceHolder runat="server" ID="PlantillaWebmaster">
+                            <asp:DropDownList ID="ddlWebmaster" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="ddlActions_OnSelectedIndexChanged">
+                                <asp:ListItem Text="Herramientas" Value="" />
+                                <asp:ListItem Text="Bitacora" Value="Bitacora" />
+                            </asp:DropDownList>
+
+                        </asp:PlaceHolder>
+                             
+                        <asp:PlaceHolder runat="server" ID="PlantillaAdmin">
+                            <asp:DropDownList ID="ddlActionsAdmin" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="ddlActions_OnSelectedIndexChanged">
+                                <asp:ListItem Text="Herramientas" Value="" />
+                                <asp:ListItem Text="ABM" Value="ABM" />
                                  
-                        </asp:DropDownList>
+                            </asp:DropDownList>
+                                 
+
+                        </asp:PlaceHolder>
                         
                         
 

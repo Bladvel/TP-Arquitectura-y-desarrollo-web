@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bitacora.cs" />
+    <Compile Include="DVH.cs" />
+    <Compile Include="Emocion.cs" />
+    <Compile Include="Libro.cs" />
+    <Compile Include="Pelicula.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -69,13 +69,40 @@ namespace Moodflix
         protected global::System.Web.UI.WebControls.LinkButton LinkProfile;
 
         /// <summary>
-        /// ddlActions control.
+        /// PlantillaWebmaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlActions;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlantillaWebmaster;
+
+        /// <summary>
+        /// ddlWebmaster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlWebmaster;
+
+        /// <summary>
+        /// PlantillaAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlantillaAdmin;
+
+        /// <summary>
+        /// ddlActionsAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlActionsAdmin;
 
         /// <summary>
         /// LinkLogout control.

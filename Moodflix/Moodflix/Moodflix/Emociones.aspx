@@ -36,19 +36,37 @@
                          <asp:PlaceHolder ID="PlantillaUserRegistrado" runat="server">
                              
                              
-                                 <asp:LinkButton CssClass="nav-link" ID="LinkProfile" runat="server"></asp:LinkButton>
+                             <asp:LinkButton CssClass="nav-link" ID="LinkProfile" runat="server"></asp:LinkButton>
                              
-                             <asp:DropDownList ID="ddlActions" runat="server" CssClass="ddlHerramientas" AutoPostBack="true">
-                                 <asp:ListItem Text="Herramientas" Value="" />
-                                 <asp:ListItem Text="Bitacora" Value="Action1" />
-                                 <asp:ListItem Text="ABM" Value="Action2" />
+                             
+                             
+                             <asp:PlaceHolder runat="server" ID="PlantillaWebmaster">
+                                 <asp:DropDownList ID="ddlWebmaster" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="ddlActions_OnSelectedIndexChanged">
+                                     <asp:ListItem Text="Herramientas" Value="" />
+                                     <asp:ListItem Text="Bitacora" Value="Bitacora" />
+                                 </asp:DropDownList>
+
+                             </asp:PlaceHolder>
+                             
+                             <asp:PlaceHolder runat="server" ID="PlantillaAdmin">
+                                 <asp:DropDownList ID="ddlActionsAdmin" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="ddlActions_OnSelectedIndexChanged">
+                                     <asp:ListItem Text="Herramientas" Value="" />
+                                     <asp:ListItem Text="ABM" Value="ABM" />
                                  
-                             </asp:DropDownList>
+                                 </asp:DropDownList>
+                                 
+
+                             </asp:PlaceHolder>
+                             
                              
 
-                                 <asp:LinkButton CssClass="nav-link" ID="LinkLogout" Text="Log out" OnClick="LinkLogout_OnClick" runat="server"></asp:LinkButton>
+                             
+                             
+
+                             <asp:LinkButton CssClass="nav-link" ID="LinkLogout" Text="Log out" OnClick="LinkLogout_OnClick" runat="server"></asp:LinkButton>
                             
                          </asp:PlaceHolder>
+                         
 
 
                         </div>
@@ -74,8 +92,8 @@
                 </div>
 
             </div>
-            <div class="row mt-2">
-                <div class="col-6  col-md-4 col-lg-3 text-center">
+            <div class="row mt-2" id="emotionsContainer" runat="server">
+                <%--<div class="col-6  col-md-4 col-lg-3 text-center">
                     <asp:ImageButton runat="server" ID="btnEmocion1" ImageUrl="Imagenes/Emociones/Aburrido.png" OnClick="btnEmocion1_OnClick"  Width="210px"/>
                     <h3 class=" w-100">Aburrido</h3>
                 </div>
@@ -122,13 +140,13 @@
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                     <asp:ImageButton runat="server" ID="btnEmocion12" ImageUrl="Imagenes/Emociones/Tristeza.png" OnClick="btnEmocion1_OnClick" Width="210px"/>
                     <h3 class=" w-100">Tristeza</h3>
-                </div>
+                </div>--%>
             </div>
                 
                 
                 
         </div>
-                
+               
 
     </form>
 

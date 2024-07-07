@@ -19,5 +19,10 @@ namespace BLL
         {
             return _mpBitacora.GetAll();
         }
+
+        public List<Services.Bitacora> Filtrar(DateTime fi, DateTime ff)
+        {
+            return _mpBitacora.FiltrarBitacora(fi, ff);
+        }
     }
 }

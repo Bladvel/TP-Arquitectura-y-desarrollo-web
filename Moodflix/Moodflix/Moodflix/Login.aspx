@@ -19,6 +19,8 @@
 <body>
     <form id="form1" runat="server">
         
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
@@ -74,7 +76,27 @@
 
         </main>
         
-        
+        <!-- MODAL -->
+        <div class="modal fade" id="modalInconsistenciaBD" tabindex="-1" role="dialog" aria-labelledby="modalInconsistenciaBDLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalInconsistenciaBDLabel">¡ADVERTENCIA! La base de datos se encuentra en un estado inconsistente.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Seleccione una opción:</p>
+                        <asp:Button ID="btnRecomponerDV" runat="server" CssClass="btn btn-primary" Text="Recomponer el dígito verificador" OnClick="btnRecomponerDV_Click" />
+                        <asp:Button ID="btnRestaurarBackup" runat="server" CssClass="btn btn-secondary" Text="Restaurar desde un backup" OnClick="btnRestaurarBackup_Click" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         
 
@@ -82,5 +104,8 @@
 <asp:PlaceHolder runat="server">
     <%: Scripts.Render("~/Scripts/bootstrap.js") %>
 </asp:PlaceHolder>
+
+
+
 </body>
 </html>

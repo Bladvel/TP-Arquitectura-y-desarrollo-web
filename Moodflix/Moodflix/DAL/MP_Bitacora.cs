@@ -60,6 +60,36 @@ namespace DAL
 
         }
 
+
+        public List<Bitacora> FiltrarBitacora(DateTime fechaInicio, DateTime fechaFin)
+        {
+            List<Bitacora> bitacoras = new List<Bitacora>();
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                access.CreateParameter("@FechaInicio", fechaInicio),
+                access.CreateParameter("@FechaFin", fechaFin)
+            };
+
+            access.Open();
+            DataTable dt = access.Read("FILTRAR_BITACORA_FECHAS", parameters);
+            access.Close();
+
+            List<Usuario> usuarios = _mpUsuario.GetAll();
+
+            foreach (DataRow registro in dt.Rows)
+            {
+                Bitacora bitacora = Transform(registro);
+
+                bitacora.User = (from Usuario us in usuarios
+                    where us.ID == bitacora.User.ID
+                    select us).FirstOrDefault();
+                bitacoras.Add(bitacora);
+            }
+
+            return bitacoras;
+        }
+
+
         public override int Insert(Bitacora entity)
         {
             List<SqlParameter> parameters = new List<SqlParameter>()

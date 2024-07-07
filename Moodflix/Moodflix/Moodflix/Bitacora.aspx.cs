@@ -27,5 +27,32 @@ namespace Moodflix
             gvBitacora.DataBind();
         }
 
+
+        
+
+
+        protected void btnFiltrar_OnClick(object sender, EventArgs e)
+        {
+
+            
+
+            if (string.IsNullOrEmpty(txtFechaHoraInicio.Value) || string.IsNullOrEmpty(txtFechaHoraFin.Value))
+            {
+                lblPrueba.Text = "Por favor selecciona una fecha de inicio y una fecha final";
+                return;
+            }
+            DateTime fechaInicio = DateTime.Parse(txtFechaHoraInicio.Value);
+            DateTime fechaFin = DateTime.Parse(txtFechaHoraFin.Value);
+
+
+            if (fechaInicio>fechaFin)
+            {
+                lblPrueba.Text = "No se puede realizar la busqueda con la 'Fecha de Fin' menor a la 'Fecha de inicio'";
+                return;
+            }
+
+            gvBitacora.DataSource = bllBitacora.Filtrar(fechaInicio, fechaFin);
+            gvBitacora.DataBind();
+        }
     }
 }

@@ -55,5 +55,16 @@ namespace BLL
             BE.Usuario user = _mpUsuario.GetAll().FirstOrDefault(u => u.Username.Equals(identityName));
             return user;
         }
+
+        public string Concatenar(BE.Usuario usuario)
+        {
+            return string.Concat(usuario.ID + usuario.Email + usuario.Password + usuario.Username);
+        }
+
+        public List<BE.Usuario> Listar()
+        {
+            return _mpUsuario.GetAll();
+        }
+
     }
 }

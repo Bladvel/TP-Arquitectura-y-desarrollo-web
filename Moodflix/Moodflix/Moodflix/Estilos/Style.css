@@ -78,6 +78,16 @@ main form {
     margin-top: 10px;
 }
 
+
+.card-shadow {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+    .card-shadow:hover {
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+
 /*.imageButton {
     transition: box-shadow 0.3s ease-in-out;*/ /* Transición suave de la sombra */
     /*box-shadow: 0 0 0px rgba(0,0,0,0);*/ /* Sombra inicial invisible */
