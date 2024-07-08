@@ -10,26 +10,28 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using BE;
 
+
 namespace Moodflix
 {
     public partial class _Default : Page
     {
         BLL.Pelicula bllPelicula = new BLL.Pelicula();
+        private string emocion = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            emocion = Session["Emocion"] as string;
+            if (emocion != null)
+            {
+                lblEmocion.InnerHtml = emocion;
+            }
+            else
+            {
+                emocion = TipoEmocion.Aburrido.ToString();
+                lblEmocion.InnerHtml = emocion;
+            }
+
             if (!IsPostBack)
             {
-                //TODO Hacer que en session["Emocion"] se guarde un objeto emocion
-                string emocion = Session["Emocion"] as string;
-                if (emocion != null)
-                {
-                    lblEmocion.InnerHtml = emocion;
-                }
-                else
-                {
-                    lblEmocion.InnerHtml = BE.TipoEmocion.Aburrido.ToString();
-                }
-
                 Session["Peliculas"] = bllPelicula.Listar();
                 
             }
@@ -42,8 +44,11 @@ namespace Moodflix
         private void GenerateCards()
         {
             List<Pelicula> peliculas = Session["Peliculas"] as List<Pelicula>;
+            var peliculasFiltradas = peliculas.Where(p => p.Emocion.TipoEmocion.ToString() == emocion).ToList();
 
-            foreach (var pelicula in peliculas)
+
+
+            foreach (var pelicula in peliculasFiltradas)
             {
                 string title = pelicula.Nombre;
                 string imageUrl = pelicula.Uri;
@@ -87,7 +92,7 @@ namespace Moodflix
                 // Crear el texto de la tarjeta
                 HtmlGenericControl divCardText = new HtmlGenericControl("div");
                 divCardText.Attributes.Add("class", "card-text");
-                divCardText.InnerText = "$" + price.ToString("N2");
+                divCardText.InnerText =price.ToString("C");
 
 
                 Button btnAgregarCarrito = new Button();
@@ -124,7 +129,25 @@ namespace Moodflix
 
         private void BtnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Button btn = sender as Button;
+            int id = int.Parse(btn.CommandArgument);
+
+            
+            List<Producto> carrito = Session["Carrito"] as List<Producto>;
+            if (carrito == null)
+            {
+                carrito = new List<Producto>();
+            }
+
+           
+            carrito.Add(bllPelicula.ObtenerPorId(id));
+
+            
+            Session["Carrito"] = carrito;
+
+            // Mostrar un mensaje de confirmación
+            ClientScript.RegisterStartupScript(this.GetType(), "AgregarCarrito", "alert('El ítem se agregó al carrito');", true);
+
         }
     }
 }

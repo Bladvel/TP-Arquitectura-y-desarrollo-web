@@ -25,7 +25,10 @@ namespace Moodflix
         BLL.Usuario bllUsuario = new BLL.Usuario();
         private BLL.Bitacora bllBitacora = new BLL.Bitacora();
         BLL.DVH bllDvh = new BLL.DVH();
-
+        BLL.DVV bllDvv = new BLL.DVV();
+        BLL.Pelicula bllPelicula = new BLL.Pelicula();
+        BLL.Libro bllLibro = new BLL.Libro();
+        BLL.Emocion bllEmocion = new BLL.Emocion();
 
         protected void Button1_OnClick(object sender, EventArgs e)
         {
@@ -47,7 +50,7 @@ namespace Moodflix
 
                     FormsAuthentication.SetAuthCookie(savedUser.Username, false);
 
-                    if (bllDvh.ValidarDigitoVerificador().Count > 0)
+                    if (bllDvh.ValidarDigitoVerificador().Count > 0 || !bllDvv.ValidarDigitoVerificador())
                     {
 
                         //Abrir ventana con opciones en caso de que el usuario sea el webmaster
@@ -78,6 +81,8 @@ namespace Moodflix
                         bitacora.Modulo = TipoModulo.InicioSesion;
                         bllBitacora.Insertar(bitacora);
 
+                        bllDvh.Recalcular(bllDvh.Listar(),bllBitacora.Listar());
+                        bllDvv.Recalcular();
 
                         string returnUrl = Request.QueryString["ReturnUrl"];
                         if (string.IsNullOrEmpty(returnUrl))
@@ -120,14 +125,71 @@ namespace Moodflix
             Response.Redirect("Registrarse.aspx");
         }
 
+
+        
+
+
+
         protected void btnRecomponerDV_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
+            List<BE.Pelicula> peliculas = bllPelicula.Listar();
+            List<BE.Emocion> emociones = bllEmocion.Listar();
+            List<BE.Libro> libros = bllLibro.Listar();
+            List<BE.Usuario> usuarios = bllUsuario.Listar();
+
+            // Listar todos los DVH
+            List<DVH> dVHs = bllDvh.Listar();
+            List<DVV> dvvs = bllDvv.Listar();
+
+            // Validar cantidad de registros
+            
+            bool peliculasValidas = bllDvh.ValidarCantidadRegistros(peliculas, dVHs, "PELICULA");
+            bool emocionesValidas = bllDvh.ValidarCantidadRegistros(emociones, dVHs, "EMOCION");
+            bool librosValidos = bllDvh.ValidarCantidadRegistros(libros, dVHs, "LIBRO");
+            bool usuariosValidos = bllDvh.ValidarCantidadRegistros(usuarios, dVHs, "USUARIO");
+
+            if ( peliculasValidas && emocionesValidas && librosValidos && usuariosValidos)
+            {
+                // Recalcular los dígitos verificadores para cada entidad
+               
+                bllDvh.Recalcular(dVHs, peliculas);
+                bllDvh.Recalcular(dVHs, emociones);
+                bllDvh.Recalcular(dVHs, libros); 
+                bllDvh.Recalcular(dVHs, usuarios);
+
+                bllDvv.Recalcular();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "Recalculado1", "alert('Se han recalculado los dígitos verificadores');", true);
+                
+            }
+            else
+            {
+                bllDvh.BorrarRegistros();
+                dVHs = bllDvh.Listar();
+
+                // Recalcular los dígitos verificadores para cada entidad después de borrar los registros
+                bllDvh.Recalcular(dVHs, peliculas);
+                bllDvh.Recalcular(dVHs, emociones);
+                bllDvh.Recalcular(dVHs, libros);
+                bllDvh.Recalcular(dVHs, usuarios);
+
+                bllDvv.Recalcular();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "Recalculado2", "alert('Se han recalculado los dígitos verificadores');", true);
+            }
+
+
+
+
+
+
+
         }
 
         protected void btnRestaurarBackup_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Response.Redirect("Backup.aspx");
         }
     }
 }

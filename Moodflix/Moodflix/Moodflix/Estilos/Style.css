@@ -88,6 +88,10 @@ main form {
     }
 
 
+.NoMaxWidth {
+    max-width: 100% !important;
+}
+
 /*.imageButton {
     transition: box-shadow 0.3s ease-in-out;*/ /* Transición suave de la sombra */
     /*box-shadow: 0 0 0px rgba(0,0,0,0);*/ /* Sombra inicial invisible */

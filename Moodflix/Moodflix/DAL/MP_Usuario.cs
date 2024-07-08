@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,19 @@ namespace DAL
 
         public override int Insert(Usuario entity)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                access.CreateParameter("@user", entity.Username),
+                access.CreateParameter("@email", entity.Email),
+                access.CreateParameter("@pass", entity.Password)
+            };
+
+            access.Open();
+            int id = access.WriteScalar("INSERTAR_USUARIO", parameters);
+            access.Close();
+
+            return id;
+
         }
 
         public override int Update(Usuario entity)

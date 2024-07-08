@@ -102,7 +102,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backup.aspx" />
     <Content Include="Bitacora.aspx" />
+    <Content Include="Carrito.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -209,6 +211,7 @@
     <Content Include="Imagenes\Peliculas\TopGunMaverick.jpg" />
     <Content Include="Imagenes\Peliculas\TristeSanValentin.jpg" />
     <Content Include="Libros.aspx" />
+    <Content Include="LibrosYPeliculas.aspx" />
     <Content Include="Peliculas.aspx" />
     <Content Include="Emociones.aspx" />
     <Content Include="Estilos\Layer_1.svg" />
@@ -300,6 +303,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Backup.aspx.cs">
+      <DependentUpon>Backup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup.aspx.designer.cs">
+      <DependentUpon>Backup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Bitacora.aspx.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,12 +317,26 @@
     <Compile Include="Bitacora.aspx.designer.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Libros.aspx.cs">
       <DependentUpon>Libros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Libros.aspx.designer.cs">
       <DependentUpon>Libros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrosYPeliculas.aspx.cs">
+      <DependentUpon>LibrosYPeliculas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibrosYPeliculas.aspx.designer.cs">
+      <DependentUpon>LibrosYPeliculas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Peliculas.aspx.cs">
       <DependentUpon>Peliculas.aspx</DependentUpon>

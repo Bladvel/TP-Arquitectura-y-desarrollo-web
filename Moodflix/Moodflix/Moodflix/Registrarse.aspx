@@ -53,7 +53,7 @@
                 </div>
                 <div class=" mx-1 mb-3 row ">
    
-                    <asp:TextBox ID="txtEmail" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" TextMode="Email" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
 
 
                 </div>
@@ -64,7 +64,7 @@
                     <label  class="form-label col">Contraseña</label>
                 </div>
                 <div class=" mx-1 mb-3 row">
-                    <asp:TextBox ID="txtPassword" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
                 </div>
                 
                 
@@ -72,7 +72,7 @@
                     <label  class="form-label col">Reintroducir Contraseña</label>
                 </div>
                 <div class=" mx-1 mb-3 row">
-                    <asp:TextBox ID="TextBox1" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" TextMode="Password" CssClass="form-control inputTextBox" runat="server"></asp:TextBox>
                 </div>
 
                 
@@ -82,6 +82,14 @@
 
                     
                 </div>
+                
+                <div class="row my-1">
+                    <asp:Panel ID="pnlError" runat="server" CssClass="alert alert-danger" Visible="False">
+                        <asp:Label ID="lblError" runat="server"></asp:Label>
+                    </asp:Panel>
+                </div>
+                
+
                 
             </div>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,7 @@ namespace Moodflix
             if (!IsPostBack)
                 SetNavbar();
         }
-
+        BLL.DVV bllDvv = new BLL.DVV();
         void SetNavbar()
         {
             if (User != null && User.Identity.IsAuthenticated)
@@ -62,7 +63,7 @@ namespace Moodflix
 
         protected void imgbVerTodo_OnClick(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Pelicula.aspx");
+            Response.Redirect("LibrosYPeliculas.aspx");
         }
 
 
@@ -75,9 +76,32 @@ namespace Moodflix
         {
             Response.Redirect("Registrarse.aspx");
         }
+        BLL.Usuario bllUsuario = new BLL.Usuario();
+        private BLL.Bitacora bllBitacora = new BLL.Bitacora();
+
+        BLL.DVH bllDvh = new BLL.DVH();
 
         protected void LinkLogout_OnClick(object sender, EventArgs e)
         {
+
+            Services.Bitacora bitacora = new Services.Bitacora();
+            bitacora.User = bllUsuario.GetUserByUsername(HttpContext.Current.User.Identity.Name);
+            bitacora.Fecha = DateTime.Now;
+            bitacora.Operacion = TipoOperacion.Logout;
+            bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo), "LibroOPelicula");
+
+            bllBitacora.Insertar(bitacora);
+            bllDvh.Recalcular(bllDvh.Listar(), bllBitacora.Listar());
+
+            bllDvv.Recalcular();
+            Session.Clear();
+            FormsAuthentication.SignOut();
+
+            //Agregar en bitacora el cierre de sesion.
+
+            Response.Redirect("Login.aspx");
+
+
             FormsAuthentication.SignOut();
             Response.Redirect("Login.aspx");
         }
@@ -98,6 +122,9 @@ namespace Moodflix
                 case "ABM":
 
                     Response.Redirect("ABM.aspx");
+                    break;
+                case "Backup":
+                    Response.Redirect("Backup.aspx");
                     break;
                 default:
 

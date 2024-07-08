@@ -13,9 +13,11 @@ namespace Moodflix
     public partial class Emociones : System.Web.UI.Page
     {
         BLL.DVH bllDvh = new BLL.DVH();
+        BLL.DVV bllDvv = new BLL.DVV();
         BLL.Usuario  bllUsuario = new BLL.Usuario();
         BLL.Pelicula bllPelicula = new BLL.Pelicula();
         BLL.Libro bllLibro = new BLL.Libro();
+        BLL.Bitacora bllBitacora = new BLL.Bitacora();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -23,7 +25,7 @@ namespace Moodflix
                 SetNavbar();
                 Session["Emociones"] = bllEmocion.Listar();
 
-                //bllDvh.Recalcular(bllDvh.Listar(), bllLibro.Listar());
+                //bllDvh.Recalcular(bllDvh.Listar(), bllBitacora.Listar());
 
 
 
@@ -108,6 +110,17 @@ namespace Moodflix
         protected void LinkLogout_OnClick(object sender, EventArgs e)
         {
             FormsAuthentication.SignOut();
+
+            Services.Bitacora bitacora = new Services.Bitacora();
+            bitacora.User = bllUsuario.GetUserByUsername(HttpContext.Current.User.Identity.Name);
+            bitacora.Fecha = DateTime.Now;
+            bitacora.Operacion = TipoOperacion.Logout;
+            bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo), "Emociones");
+
+            bllBitacora.Insertar(bitacora);
+            bllDvh.Recalcular(bllDvh.Listar(), bllBitacora.Listar());
+            bllDvv.Recalcular();
+            Session.Clear();
             Response.Redirect("Login.aspx");
         }
 
@@ -147,6 +160,9 @@ namespace Moodflix
                 case "ABM":
 
                     Response.Redirect("ABM.aspx");
+                    break;
+                case "Backup":
+                    Response.Redirect("Backup.aspx");
                     break;
                 default:
 

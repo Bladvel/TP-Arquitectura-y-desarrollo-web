@@ -38,6 +38,7 @@
                             <asp:DropDownList ID="ddlWebmaster" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="ddlActions_OnSelectedIndexChanged">
                                 <asp:ListItem Text="Herramientas" Value="" />
                                 <asp:ListItem Text="Bitacora" Value="Bitacora" />
+                                <asp:ListItem Text="Backup" Value="Backup" />
                             </asp:DropDownList>
 
                         </asp:PlaceHolder>

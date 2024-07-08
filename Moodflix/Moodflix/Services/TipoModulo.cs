@@ -14,6 +14,8 @@ namespace Services
         Libros,
         Ambos,
         Bitacora,
-
+        LibroOPelicula,
+        Backup,
+        Carrito,
     }
 }

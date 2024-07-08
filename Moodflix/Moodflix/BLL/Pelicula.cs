@@ -15,6 +15,11 @@ namespace BLL
             return mpPelicula.GetAll();
         }
 
+        public BE.Pelicula ObtenerPorId(int id)
+        {
+            return mpPelicula.GetById(id);
+        }
+
         public string Concatenar(BE.Pelicula pelicula)
         {
             return string.Concat(pelicula.ID + pelicula.Nombre + pelicula.Descripcion + pelicula.Fecha +

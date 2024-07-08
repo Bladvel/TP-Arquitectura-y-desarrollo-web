@@ -17,6 +17,9 @@ namespace BLL
         Emocion bllEmocion = new Emocion();
         Pelicula bllPelicula = new Pelicula();
         Libro bllLibro = new Libro();
+        Bitacora bllBitacora = new Bitacora();
+
+
 
         public List<Services.DVH> Listar()
         {
@@ -33,6 +36,12 @@ namespace BLL
             return mpDvh.Update(dvh);
         }
 
+        public void BorrarRegistros()
+        {
+            mpDvh.DeleteAll();
+        }
+
+
         public string ObtenerDV(string cadena)
         {
             return CryptoManager.Hash(cadena);
@@ -48,6 +57,28 @@ namespace BLL
                 Services.DVH dvh = new Services.DVH();
                 dvh.Tabla = "USUARIO";
                 dvh.Registro = usuarios[i].ID;
+                dvh.DV = ObtenerDV(cadena);
+
+                var existeDvh = dvhs.FirstOrDefault(d => d.Tabla == dvh.Tabla && d.Registro == dvh.Registro);
+                if (existeDvh != null)
+                {
+                    Actualizar(dvh);
+                }
+                else
+                {
+                    Insertar(dvh);
+                }
+
+            }
+        }
+        public void Recalcular(List<Services.DVH> dvhs, List<Services.Bitacora> bitacora)
+        {
+            for (int i = 0; i < bitacora.Count; i++)
+            {
+                string cadena = bllBitacora.Concatenar(bitacora[i]);
+                Services.DVH dvh = new Services.DVH();
+                dvh.Tabla = "BITACORA";
+                dvh.Registro = bitacora[i].ID;
                 dvh.DV = ObtenerDV(cadena);
 
                 var existeDvh = dvhs.FirstOrDefault(d => d.Tabla == dvh.Tabla && d.Registro == dvh.Registro);
@@ -131,67 +162,186 @@ namespace BLL
             }
         }
 
+        //public List<Services.DVH> ValidarDigitoVerificador()
+        //{
+        //    List<Services.DVH> registrosInvalidos = new List<Services.DVH>();
+
+        //    // Listar todas las entidades de la base de datos
+        //    List<BE.Pelicula> peliculas = bllPelicula.Listar();
+        //    List<BE.Emocion> emociones = bllEmocion.Listar();
+        //    List<BE.Libro> libros = bllLibro.Listar();
+        //    List<BE.Usuario> usuarios = bllUsuario.Listar();
+
+
+
+        //    List<Services.DVH> dVHs = Listar();
+
+
+        //    foreach (var pelicula in peliculas)
+        //    {
+        //        var cadena = bllPelicula.Concatenar(pelicula);
+        //        var hash = ObtenerDV(cadena);
+
+        //        var dvh = dVHs.FirstOrDefault(d => d.Tabla == "PELICULA" && d.Registro == pelicula.ID);
+        //        if (dvh != null && hash != dvh.DV)
+        //        {
+        //            registrosInvalidos.Add(dvh);
+        //        }
+
+
+        //    }
+
+        //    foreach (var emocion in emociones)
+        //    {
+        //        var cadena = bllEmocion.Concatenar(emocion);
+        //        var hash = ObtenerDV(cadena);
+        //        var dvh = dVHs.FirstOrDefault(d => d.Tabla == "EMOCION" && d.Registro == emocion.ID);
+        //        if (dvh != null && hash != dvh.DV)
+        //        {
+        //            registrosInvalidos.Add(dvh);
+        //        }
+        //    }
+
+
+        //    foreach (var usuario in usuarios)
+        //    {
+        //        var cadena = bllUsuario.Concatenar(usuario);
+        //        var hash = ObtenerDV(cadena);
+
+        //        var dvh = dVHs.FirstOrDefault(d => d.Tabla == "USUARIO" && d.Registro == usuario.ID);
+        //        if (dvh != null && hash != dvh.DV)
+        //        {
+        //            registrosInvalidos.Add(dvh);
+        //        }
+        //    }
+
+
+        //    foreach (var libro in libros)
+        //    {
+        //        var cadena = bllLibro.Concatenar(libro);
+        //        var hash = ObtenerDV(cadena);
+
+        //        var dvh = dVHs.FirstOrDefault(d => d.Tabla == "LIBRO" && d.Registro == libro.ID);
+        //        if (dvh != null && hash != dvh.DV)
+        //        {
+        //            registrosInvalidos.Add(dvh);
+        //        }
+        //    }
+
+        //    return registrosInvalidos;
+        //}
+
         public List<Services.DVH> ValidarDigitoVerificador()
         {
             List<Services.DVH> registrosInvalidos = new List<Services.DVH>();
 
-            // Listar todas las entidades de la base de datos
+            
             List<BE.Pelicula> peliculas = bllPelicula.Listar();
             List<BE.Emocion> emociones = bllEmocion.Listar();
             List<BE.Libro> libros = bllLibro.Listar();
             List<BE.Usuario> usuarios = bllUsuario.Listar();
-            
+            List<Services.Bitacora> bitacoras = bllBitacora.Listar();
 
             
             List<Services.DVH> dVHs = Listar();
 
-
-            foreach (var pelicula in peliculas)
-            {
-                var cadena = bllPelicula.Concatenar(pelicula);
-                var hash = ObtenerDV(cadena);
-
-                var dvh = dVHs.FirstOrDefault(d => d.Tabla == "PELICULA" && d.Registro == pelicula.ID);
-                if (dvh != null && hash != dvh.DV)
-                {
-                    registrosInvalidos.Add(dvh);
-                }
-
-
-            }
-
-            foreach (var emocion in emociones)
-            {
-                var cadena = bllEmocion.Concatenar(emocion);
-                var hash = ObtenerDV(cadena);
-                var dvh = dVHs.FirstOrDefault(d => d.Tabla == "EMOCION" && d.Registro == emocion.ID);
-                if (dvh != null && hash != dvh.DV)
-                {
-                    registrosInvalidos.Add(dvh);
-                }
-            }
-
             
-            foreach (var usuario in usuarios)
+            foreach (var dvh in dVHs)
             {
-                var cadena = bllUsuario.Concatenar(usuario);
-                var hash = ObtenerDV(cadena);
+                bool registroValido = true;
 
-                var dvh = dVHs.FirstOrDefault(d => d.Tabla == "USUARIO" && d.Registro == usuario.ID);
-                if (dvh != null && hash != dvh.DV)
+                switch (dvh.Tabla)
                 {
-                    registrosInvalidos.Add(dvh);
+                    case "PELICULA":
+                        var pelicula = peliculas.FirstOrDefault(p => p.ID == dvh.Registro);
+                        if (pelicula != null)
+                        {
+                            var cadena = bllPelicula.Concatenar(pelicula);
+                            var hash = ObtenerDV(cadena);
+                            if (hash != dvh.DV)
+                            {
+                                registroValido = false;
+                            }
+                        }
+                        else
+                        {
+                            registroValido = false; 
+                        }
+                        break;
+
+                    case "EMOCION":
+                        var emocion = emociones.FirstOrDefault(e => e.ID == dvh.Registro);
+                        if (emocion != null)
+                        {
+                            var cadena = bllEmocion.Concatenar(emocion);
+                            var hash = ObtenerDV(cadena);
+                            if (hash != dvh.DV)
+                            {
+                                registroValido = false;
+                            }
+                        }
+                        else
+                        {
+                            registroValido = false; 
+                        }
+                        break;
+
+                    case "LIBRO":
+                        var libro = libros.FirstOrDefault(l => l.ID == dvh.Registro);
+                        if (libro != null)
+                        {
+                            var cadena = bllLibro.Concatenar(libro);
+                            var hash = ObtenerDV(cadena);
+                            if (hash != dvh.DV)
+                            {
+                                registroValido = false;
+                            }
+                        }
+                        else
+                        {
+                            registroValido = false;
+                        }
+                        break;
+
+                    case "USUARIO":
+                        var usuario = usuarios.FirstOrDefault(u => u.ID == dvh.Registro);
+                        if (usuario != null)
+                        {
+                            var cadena = bllUsuario.Concatenar(usuario);
+                            var hash = ObtenerDV(cadena);
+                            if (hash != dvh.DV)
+                            {
+                                registroValido = false;
+                            }
+                        }
+                        else
+                        {
+                            registroValido = false; 
+                        }
+                        break;
+                    
+                    case "BITACORA":
+                        var bitacora = bitacoras.FirstOrDefault(b => b.ID == dvh.Registro);
+                        if (bitacora != null)
+                        {
+                            var cadena = bllBitacora.Concatenar(bitacora);
+                            var hash = ObtenerDV(cadena);
+                            if (hash != dvh.DV)
+                            {
+                                registroValido = false;
+                            }
+                        }
+                        else
+                        {
+                            registroValido = false;
+                        }
+                        break;
+                    default:
+                        registroValido = false;
+                        break;
                 }
-            }
 
-
-            foreach (var libro in libros)
-            {
-                var cadena = bllLibro.Concatenar(libro);
-                var hash = ObtenerDV(cadena);
-
-                var dvh = dVHs.FirstOrDefault(d => d.Tabla == "LIBRO" && d.Registro == libro.ID);
-                if (dvh != null && hash != dvh.DV)
+                if (!registroValido)
                 {
                     registrosInvalidos.Add(dvh);
                 }
@@ -199,6 +349,24 @@ namespace BLL
 
             return registrosInvalidos;
         }
+
+        public bool ValidarCantidadRegistros<T>(List<T> entidades, List<Services.DVH> dVHs, string tabla)
+        {
+            bool ok = true;
+
+            
+            List<Services.DVH> dVHsFiltrados = dVHs.Where(dvh => dvh.Tabla == tabla).ToList();
+
+            
+            if (entidades.Count != dVHsFiltrados.Count)
+            {
+                ok = false;
+            }
+
+            return ok;
+        }
+
+
 
 
 

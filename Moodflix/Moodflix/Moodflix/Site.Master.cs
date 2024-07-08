@@ -61,7 +61,7 @@ namespace Moodflix
 
         protected void linkPeliculas_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("Pelicula.aspx");
+            Response.Redirect("Peliculas.aspx");
         }
 
         protected void linkLogin_OnClick(object sender, EventArgs e)
@@ -100,6 +100,8 @@ namespace Moodflix
 
         private BLL.Bitacora bllBitacora = new BLL.Bitacora();
         BLL.Usuario bllUsuario = new BLL.Usuario();
+        BLL.DVH bllDvh = new BLL.DVH();
+        BLL.DVV bllDvv= new BLL.DVV();
         protected void LinkLogout_OnClick(object sender, EventArgs e)
         {
 
@@ -110,8 +112,10 @@ namespace Moodflix
             bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo),ObtenerNombreDePagina());
 
             bllBitacora.Insertar(bitacora);
+            bllDvh.Recalcular(bllDvh.Listar(), bllBitacora.Listar());
+            bllDvv.Recalcular();
 
-
+            Session.Clear();
             FormsAuthentication.SignOut();
 
             //Agregar en bitacora el cierre de sesion.
@@ -136,10 +140,18 @@ namespace Moodflix
                     
                     Response.Redirect("ABM.aspx");
                     break;
+                case "Backup":
+                    Response.Redirect("Backup.aspx");
+                    break;
                 default:
                     
                     break;
             }
+        }
+
+        protected void linkMiscompras_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Carrito.aspx");
         }
     }
 }

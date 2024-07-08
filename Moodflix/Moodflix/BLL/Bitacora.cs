@@ -24,5 +24,11 @@ namespace BLL
         {
             return _mpBitacora.FiltrarBitacora(fi, ff);
         }
+
+        public string Concatenar(Services.Bitacora bitacora)
+        {
+            return string.Concat(bitacora.ID.ToString() + bitacora.Fecha.ToString() + bitacora.Modulo.ToString() +
+                                 bitacora.Operacion.ToString() + bitacora.User.ToString());
+        }
     }
 }

@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupService.cs" />
     <Compile Include="Bitacora.cs" />
     <Compile Include="DVH.cs" />
+    <Compile Include="DVV.cs" />
     <Compile Include="Emocion.cs" />
     <Compile Include="Libro.cs" />
     <Compile Include="Pelicula.cs" />

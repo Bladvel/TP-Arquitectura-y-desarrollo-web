@@ -81,5 +81,14 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public int DeleteAll()
+        {
+            access.Open();
+            int resultado = access.Write("ELIMINAR_TODOS_DVH");
+            access.Close();
+
+            return resultado;
+        }
     }
 }

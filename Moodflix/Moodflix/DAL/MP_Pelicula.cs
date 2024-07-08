@@ -12,7 +12,8 @@ namespace DAL
     {
         public override Pelicula GetById(object id)
         {
-            throw new NotImplementedException();
+            int ID = int.Parse(id.ToString());
+            return GetAll().FirstOrDefault(p => p.ID.Equals(ID));
         }
 
         MP_Emocion mpEmocion = new MP_Emocion();

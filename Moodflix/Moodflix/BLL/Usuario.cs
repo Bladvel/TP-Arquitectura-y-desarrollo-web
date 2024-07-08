@@ -66,5 +66,9 @@ namespace BLL
             return _mpUsuario.GetAll();
         }
 
+        public int Insertar(BE.Usuario usuario)
+        {
+            return _mpUsuario.Insert(usuario);
+        }
     }
 }

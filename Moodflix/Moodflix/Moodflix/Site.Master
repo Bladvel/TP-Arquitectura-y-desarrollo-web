@@ -34,6 +34,12 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+                
+                
+                
+                    <asp:ScriptReference Path="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+                    <asp:ScriptReference Path="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" />
+                
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
@@ -78,6 +84,7 @@
                                     <asp:DropDownList ID="ddlWebmaster" runat="server" CssClass="ddlHerramientas" AutoPostBack="true" OnSelectedIndexChanged="ddlActions_OnSelectedIndexChanged">
                                         <asp:ListItem Text="Herramientas" Value="" />
                                         <asp:ListItem Text="Bitacora" Value="Bitacora" />
+                                        <asp:ListItem Text="Backup" Value="Backup" />
                                     </asp:DropDownList>
 
                                 </asp:PlaceHolder>
@@ -116,7 +123,7 @@
                                 
                                 
 
-                                <asp:LinkButton CssClass="nav-link px-2" ID="linkMiscompras" runat="server">
+                                <asp:LinkButton CssClass="nav-link px-2" ID="linkMiscompras" runat="server" OnClick="linkMiscompras_OnClick">
                                     Mis Compras
                                     <img src="Imagenes/Layer_1.svg" alt="">
                                 </asp:LinkButton>
@@ -150,6 +157,10 @@
             </footer>
         </div>
     </form>
+    <asp:ContentPlaceHolder ID="ScriptsPersonales" runat="server"></asp:ContentPlaceHolder>
+
+
+
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>

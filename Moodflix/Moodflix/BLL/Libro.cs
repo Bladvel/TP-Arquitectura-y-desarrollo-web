@@ -16,6 +16,12 @@ namespace BLL
             return mpLibro.GetAll();
         }
 
+        public BE.Libro ObtenerPorId(int id)
+        {
+            return mpLibro.GetById(id);
+        }
+
+
         public string Concatenar(BE.Libro libro)
         {
             return string.Concat(libro.ID + libro.Nombre + libro.Descripcion + libro.Fecha + libro.Autor +

@@ -12,7 +12,8 @@ namespace DAL
     {
         public override Libro GetById(object id)
         {
-            throw new NotImplementedException();
+            int ID = int.Parse(id.ToString());
+            return GetAll().FirstOrDefault(l => l.ID.Equals(ID));
         }
 
         private MP_Emocion mpEmocion = new MP_Emocion();

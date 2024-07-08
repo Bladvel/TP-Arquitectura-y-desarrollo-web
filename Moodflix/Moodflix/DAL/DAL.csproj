@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Access.cs" />
+    <Compile Include="BackupRepository.cs" />
     <Compile Include="Mapper.cs" />
     <Compile Include="MP_Bitacora.cs" />
     <Compile Include="MP_Dvh.cs" />
+    <Compile Include="MP_Dvv.cs" />
     <Compile Include="MP_Emocion.cs" />
     <Compile Include="MP_Libro.cs" />
     <Compile Include="MP_Pelicula.cs" />

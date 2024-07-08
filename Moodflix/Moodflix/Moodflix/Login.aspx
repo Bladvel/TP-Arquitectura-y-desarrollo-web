@@ -15,11 +15,17 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="Estilos/Style.css"/>
+    
+    
+    
+    
+    
+
 </head>
 <body>
     <form id="form1" runat="server">
         
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -82,13 +88,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalInconsistenciaBDLabel">¡ADVERTENCIA! La base de datos se encuentra en un estado inconsistente.</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <div class="modal-body">
                         <p>Seleccione una opción:</p>
-                        <asp:Button ID="btnRecomponerDV" runat="server" CssClass="btn btn-primary" Text="Recomponer el dígito verificador" OnClick="btnRecomponerDV_Click" />
+                        <asp:Button ID="btnRecomponerDV" runat="server" CssClass="btn btn-primary mb-2" Text="Recomponer el dígito verificador" OnClick="btnRecomponerDV_Click" />
                         <asp:Button ID="btnRestaurarBackup" runat="server" CssClass="btn btn-secondary" Text="Restaurar desde un backup" OnClick="btnRestaurarBackup_Click" />
                     </div>
                     <div class="modal-footer">
@@ -98,6 +101,13 @@
             </div>
         </div>
         
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+                <asp:ScriptReference Path="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" />
+            </Scripts>
+        </asp:ScriptManager>
         
 
     </form>

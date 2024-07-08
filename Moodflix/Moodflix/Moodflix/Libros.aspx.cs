@@ -12,19 +12,22 @@ namespace Moodflix
     public partial class Libros : System.Web.UI.Page
     {
         BLL.Libro bllLibro = new BLL.Libro();
+        private string emocion = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            emocion = Session["Emocion"] as string;
+            if (emocion != null)
+            {
+                lblEmocion.InnerHtml = emocion;
+            }
+            else
+            {
+                emocion = TipoEmocion.Aburrido.ToString();
+                lblEmocion.InnerHtml = emocion;
+            }
             if (!IsPostBack)
             {
-                string emocion = Session["Emocion"] as string;
-                if (emocion != null)
-                {
-                    lblEmocion.InnerHtml = emocion;
-                }
-                else
-                {
-                    lblEmocion.InnerHtml = BE.TipoEmocion.Aburrido.ToString();
-                }
+                
 
                 Session["Libros"] = bllLibro.Listar();
 
@@ -39,7 +42,9 @@ namespace Moodflix
         {
             List<Libro> libros = Session["Libros"] as List<Libro>;
 
-            foreach (var libro in libros)
+            var librosFiltrados = libros.Where(l => l.Emocion.TipoEmocion.ToString() == emocion).ToList();
+
+            foreach (var libro in librosFiltrados)
             {
                 string title = libro.Nombre;
                 string imageUrl = libro.Uri;
@@ -83,7 +88,7 @@ namespace Moodflix
                 // Crear el texto de la tarjeta
                 HtmlGenericControl divCardText = new HtmlGenericControl("div");
                 divCardText.Attributes.Add("class", "card-text");
-                divCardText.InnerText = "$" + price.ToString("N2");
+                divCardText.InnerText = price.ToString("C");
 
 
                 Button btnAgregarCarrito = new Button();
@@ -120,7 +125,25 @@ namespace Moodflix
 
         private void BtnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Button btn = sender as Button;
+            int id = int.Parse(btn.CommandArgument);
+
+
+            List<Producto> carrito = Session["Carrito"] as List<Producto>;
+            if (carrito == null)
+            {
+                carrito = new List<Producto>();
+            }
+
+
+            carrito.Add(bllLibro.ObtenerPorId(id));
+
+
+            Session["Carrito"] = carrito;
+
+            // Mostrar un mensaje de confirmación
+            ClientScript.RegisterStartupScript(this.GetType(), "AgregarCarrito", "alert('El ítem se agregó al carrito');", true);
+
         }
 
 
