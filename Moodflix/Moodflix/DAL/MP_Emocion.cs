@@ -34,7 +34,17 @@ namespace DAL
         {
             Emocion emocion = new Emocion();
             emocion.ID = int.Parse(dr["ID"].ToString());
-            emocion.TipoEmocion = (TipoEmocion)Enum.Parse(typeof(TipoEmocion), dr["NOMBRE"].ToString());
+
+            try
+            {
+                emocion.TipoEmocion = (TipoEmocion)Enum.Parse(typeof(TipoEmocion), dr["NOMBRE"].ToString());
+            }
+            catch
+            {
+                emocion.TipoEmocion = TipoEmocion.Desconocida;
+            }
+
+            
             emocion.Uri = dr["URI_RELATIVO"].ToString();
 
             return emocion;
@@ -67,7 +77,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public override int Delete(Emocion entity)
+        public override int Delete(int id)
         {
             throw new NotImplementedException();
         }

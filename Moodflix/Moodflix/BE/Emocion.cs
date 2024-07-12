@@ -17,5 +17,13 @@ namespace BE
 
         private TipoEmocion _emocion;
         public TipoEmocion TipoEmocion { get => _emocion; set => _emocion = value; }
+
+        public string Nombre => TipoEmocion.ToString();
+
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

@@ -15,6 +15,24 @@ namespace Moodflix
     {
 
         /// <summary>
+        /// btnGenerarBackup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerarBackup;
+
+        /// <summary>
+        /// hlDescargarBackup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlDescargarBackup;
+
+        /// <summary>
         /// txtRutaRestore control.
         /// </summary>
         /// <remarks>

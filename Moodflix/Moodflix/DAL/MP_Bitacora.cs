@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using BE;
@@ -24,8 +25,27 @@ namespace DAL
             Bitacora bitacora = new Bitacora();
             bitacora.ID = int.Parse(dr["ID"].ToString());
             bitacora.Fecha = DateTime.Parse(dr["FECHA"].ToString());
-            bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo), dr["MODULO"].ToString());
-            bitacora.Operacion = (TipoOperacion)Enum.Parse(typeof(TipoOperacion), dr["OPERACION"].ToString());
+            //Arreglar cambio de bitacora
+            try
+            {
+                bitacora.Modulo = (TipoModulo)Enum.Parse(typeof(TipoModulo), dr["MODULO"].ToString());
+            }
+            catch
+            {
+                bitacora.Modulo = TipoModulo.Desconocido;
+            }
+
+
+            try
+            {
+                bitacora.Operacion = (TipoOperacion)Enum.Parse(typeof(TipoOperacion), dr["OPERACION"].ToString());
+            }
+            catch (Exception e)
+            {
+                bitacora.Operacion = TipoOperacion.Desconocida;
+            }
+
+            
             bitacora.User = new Usuario();
             bitacora.User.ID = int.Parse(dr["ID_USUARIO"].ToString());
 
@@ -114,7 +134,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public override int Delete(Bitacora entity)
+        public override int Delete(int id)
         {
             throw new NotImplementedException();
         }

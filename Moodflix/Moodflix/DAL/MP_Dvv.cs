@@ -74,7 +74,7 @@ namespace DAL
             return id;
         }
 
-        public override int Delete(DVV entity)
+        public override int Delete(int id)
         {
             throw new NotImplementedException();
         }

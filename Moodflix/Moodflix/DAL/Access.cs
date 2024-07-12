@@ -66,6 +66,13 @@ namespace DAL
             param.DbType = DbType.DateTime;
             return param;
         }
+        
+        public SqlParameter CreateParameter(string name, float value)
+        {
+            SqlParameter param = new SqlParameter(name, value);
+            param.DbType = DbType.Decimal;
+            return param;
+        }
 
         private SqlCommand CreateCommand(string sql, List<SqlParameter> parameters = null)
         {

@@ -31,10 +31,10 @@
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <asp:ImageButton ID="ImageButton1" CssClass="logo" ImageUrl="Imagenes/moodflix-07.png" Width="200px" OnClick="ImageButton1_OnClick" runat="server" />
+                    <asp:ImageButton ID="ImageButton1" CssClass="logo" ImageUrl="Imagenes/moodflix-07.png" Width="200px" OnClick="ImageButton1_OnClick" runat="server" CausesValidation="False" />
                 </a>
                 <div class="navbar-nav ms-auto">
-                    <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Registrarse" OnClick="LinkInitRegistro_OnClick" runat="server"> </asp:LinkButton>
+                    <asp:LinkButton CssClass="nav-link" ID="LinkInitRegistro" Text="Registrarse" OnClick="LinkInitRegistro_OnClick" runat="server" CausesValidation="False"> </asp:LinkButton>
                 </div>
             </div>
         </nav>
@@ -90,6 +90,7 @@
                         <h5 class="modal-title" id="modalInconsistenciaBDLabel">¡ADVERTENCIA! La base de datos se encuentra en un estado inconsistente.</h5>
                     </div>
                     <div class="modal-body">
+                        <asp:Label ID="lblInformacion" runat="server"></asp:Label>
                         <p>Seleccione una opción:</p>
                         <asp:Button ID="btnRecomponerDV" runat="server" CssClass="btn btn-primary mb-2" Text="Recomponer el dígito verificador" OnClick="btnRecomponerDV_Click" />
                         <asp:Button ID="btnRestaurarBackup" runat="server" CssClass="btn btn-secondary" Text="Restaurar desde un backup" OnClick="btnRestaurarBackup_Click" />

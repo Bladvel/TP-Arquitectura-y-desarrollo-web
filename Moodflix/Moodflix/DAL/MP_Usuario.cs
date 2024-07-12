@@ -65,7 +65,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public override int Delete(Usuario entity)
+        public override int Delete(int id)
         {
             throw new NotImplementedException();
         }

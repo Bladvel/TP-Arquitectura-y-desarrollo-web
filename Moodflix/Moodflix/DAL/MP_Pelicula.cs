@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,17 +53,61 @@ namespace DAL
 
         public override int Insert(Pelicula entity)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                access.CreateParameter("@Nombre", entity.Nombre),
+                access.CreateParameter("@Descripcion", entity.Descripcion),
+                access.CreateParameter("@Fecha", entity.Fecha),
+                access.CreateParameter("@Genero", entity.Genero),
+                access.CreateParameter("@Director", entity.Director),
+                access.CreateParameter("@ID_Emocion", entity.Emocion.ID),
+                access.CreateParameter("@Uri_Relativo", entity.Uri),
+                access.CreateParameter("@Precio", entity.Precio),
+            };
+
+            access.Open();
+            int resultado = access.Write("INSERTAR_PELICULA", parameters);
+            access.Close();
+            return resultado;
+
+
         }
 
         public override int Update(Pelicula entity)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                access.CreateParameter("@ID", entity.ID),
+                access.CreateParameter("@Nombre", entity.Nombre),
+                access.CreateParameter("@Descripcion", entity.Descripcion),
+                access.CreateParameter("@Fecha", entity.Fecha),
+                access.CreateParameter("@Genero", entity.Genero),
+                access.CreateParameter("@Director", entity.Director),
+                access.CreateParameter("@ID_Emocion", entity.Emocion.ID),
+                access.CreateParameter("@Uri_Relativo", entity.Uri),
+                access.CreateParameter("@Precio", entity.Precio),
+            };
+
+            access.Open();
+            int resultado = access.Write("MODIFICAR_PELICULA", parameters);
+            access.Close();
+            return resultado;
         }
 
-        public override int Delete(Pelicula entity)
+        public override int Delete(int id)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                access.CreateParameter("@ID", id),
+                
+            };
+
+
+            access.Open();
+            int resultado = access.Write("ELIMINAR_PELICULA", parameters);
+            access.Close();
+
+            return resultado;
         }
     }
 }

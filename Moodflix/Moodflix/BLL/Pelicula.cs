@@ -26,5 +26,20 @@ namespace BLL
                                  pelicula.Genero + pelicula.Director + pelicula.Emocion.ID + pelicula.Uri +
                                  pelicula.Precio);
         }
+
+        public void Insertar(BE.Pelicula pelicula)
+        {
+            mpPelicula.Insert(pelicula);
+        }
+
+        public void Actualizar(BE.Pelicula pelicula)
+        {
+            mpPelicula.Update(pelicula);
+        }
+
+        public void Eliminar(int id)
+        {
+            mpPelicula.Delete(id);
+        }
     }
 }

@@ -28,5 +28,19 @@ namespace BLL
                                  libro.Editorial + libro.Emocion.ID + libro.Uri + libro.Precio);
         }
 
+        public void Insertar(BE.Libro libro)
+        {
+            mpLibro.Insert(libro);
+        }
+
+        public void Actualizar(BE.Libro libro)
+        {
+            mpLibro.Update(libro);
+        }
+
+        public void Eliminar(int id)
+        {
+            mpLibro.Delete(id);
+        }
     }
 }

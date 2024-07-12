@@ -19,6 +19,7 @@ namespace BE
         Optimista,
         Pasion,
         Sorpresa,
-        Tristeza
+        Tristeza,
+        Desconocida,
     }
 }

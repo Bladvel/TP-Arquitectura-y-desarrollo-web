@@ -147,7 +147,7 @@ namespace BLL
                     case "PRECIO":
                         return libro.Precio.ToString();
                     default:
-                        throw new ArgumentException("Invalid column name");
+                        throw new ArgumentException("Nombre de columna invalido");
                 }
             }
             else if (entity is BE.Emocion emocion)
@@ -161,7 +161,7 @@ namespace BLL
                     case "URI_RELATIVO":
                         return emocion.Uri;
                     default:
-                        throw new ArgumentException("Invalid column name");
+                        throw new ArgumentException("Nombre de columna invalido");
                 }
             }
             else if (entity is BE.Pelicula pelicula)
@@ -187,7 +187,7 @@ namespace BLL
                     case "PRECIO":
                         return pelicula.Precio.ToString();
                     default:
-                        throw new ArgumentException("Invalid column name");
+                        throw new ArgumentException("Nombre de columna invalido");
                 }
             }
             else if (entity is BE.Usuario usuario)
@@ -203,7 +203,7 @@ namespace BLL
                     case "PASSWORD":
                         return usuario.Password;
                     default:
-                        throw new ArgumentException("Invalid column name");
+                        throw new ArgumentException("Nombre de columna invalido");
                 }
             }
             else if (entity is Services.Bitacora bitacora)
@@ -221,12 +221,12 @@ namespace BLL
                     case "MODULO":
                         return bitacora.Modulo.ToString();
                     default:
-                        throw new ArgumentException("Invalid column name");
+                        throw new ArgumentException("Nombre de columna invalido");
                 }
             }
             else
             {
-                throw new ArgumentException("Invalid entity type");
+                throw new ArgumentException("Yipo de entidad desconocida");
             }
         }
 

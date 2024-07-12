@@ -10,9 +10,9 @@ namespace BLL
     {
         private DAL.BackupRepository backup = new DAL.BackupRepository();
 
-        public void CreateBackup(string path)
+        public int CreateBackup(string path)
         {
-            backup.CreateBackup(path);
+            return backup.CreateBackup(path);
         }
 
         public void RestoresBackup(string path)

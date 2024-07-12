@@ -231,24 +231,22 @@ namespace BLL
         //    return registrosInvalidos;
         //}
 
-        public List<Services.DVH> ValidarDigitoVerificador()
+        public List<RegistroInvalido> ValidarDigitoVerificador()
         {
-            List<Services.DVH> registrosInvalidos = new List<Services.DVH>();
+            List<RegistroInvalido> registrosInvalidos = new List<RegistroInvalido>();
 
-            
             List<BE.Pelicula> peliculas = bllPelicula.Listar();
             List<BE.Emocion> emociones = bllEmocion.Listar();
             List<BE.Libro> libros = bllLibro.Listar();
             List<BE.Usuario> usuarios = bllUsuario.Listar();
             List<Services.Bitacora> bitacoras = bllBitacora.Listar();
 
-            
             List<Services.DVH> dVHs = Listar();
 
-            
             foreach (var dvh in dVHs)
             {
                 bool registroValido = true;
+                string estado = "";
 
                 switch (dvh.Tabla)
                 {
@@ -261,11 +259,13 @@ namespace BLL
                             if (hash != dvh.DV)
                             {
                                 registroValido = false;
+                                estado = "Modificado";
                             }
                         }
                         else
                         {
-                            registroValido = false; 
+                            registroValido = false;
+                            estado = "Eliminado";
                         }
                         break;
 
@@ -278,11 +278,13 @@ namespace BLL
                             if (hash != dvh.DV)
                             {
                                 registroValido = false;
+                                estado = "Modificado";
                             }
                         }
                         else
                         {
-                            registroValido = false; 
+                            registroValido = false;
+                            estado = "Eliminado";
                         }
                         break;
 
@@ -295,11 +297,13 @@ namespace BLL
                             if (hash != dvh.DV)
                             {
                                 registroValido = false;
+                                estado = "Modificado";
                             }
                         }
                         else
                         {
                             registroValido = false;
+                            estado = "Eliminado";
                         }
                         break;
 
@@ -312,14 +316,16 @@ namespace BLL
                             if (hash != dvh.DV)
                             {
                                 registroValido = false;
+                                estado = "Modificado";
                             }
                         }
                         else
                         {
-                            registroValido = false; 
+                            registroValido = false;
+                            estado = "Eliminado";
                         }
                         break;
-                    
+
                     case "BITACORA":
                         var bitacora = bitacoras.FirstOrDefault(b => b.ID == dvh.Registro);
                         if (bitacora != null)
@@ -329,26 +335,31 @@ namespace BLL
                             if (hash != dvh.DV)
                             {
                                 registroValido = false;
+                                estado = "Modificado";
                             }
                         }
                         else
                         {
                             registroValido = false;
+                            estado = "Eliminado";
                         }
                         break;
+
                     default:
                         registroValido = false;
+                        estado = "Tabla desconocida";
                         break;
                 }
 
                 if (!registroValido)
                 {
-                    registrosInvalidos.Add(dvh);
+                    registrosInvalidos.Add(new RegistroInvalido { DVH = dvh, Estado = estado });
                 }
             }
 
             return registrosInvalidos;
         }
+
 
         public bool ValidarCantidadRegistros<T>(List<T> entidades, List<Services.DVH> dVHs, string tabla)
         {

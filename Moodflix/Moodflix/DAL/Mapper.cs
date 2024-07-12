@@ -15,6 +15,6 @@ namespace DAL
         public abstract List<T> GetAll();
         public abstract int Insert(T entity);
         public abstract int Update(T entity);
-        public abstract int Delete(T entity);
+        public abstract int Delete(int id);
     }
 }

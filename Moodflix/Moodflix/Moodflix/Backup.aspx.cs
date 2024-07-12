@@ -29,31 +29,48 @@ namespace Moodflix
                 string rutaRestore = FileUploadRestore.PostedFile.FileName;
                 txtRutaRestore.Text = rutaRestore;
 
-                
+
                 try
                 {
                     //TODO no funciona el restore por problema de permisos
-                    
+
                     string path = Server.MapPath("~/App_Data/" + FileUploadRestore.FileName);
                     FileUploadRestore.SaveAs(path);
 
-                    
+
                     bllBackupService.RestoresBackup(path);
 
-                    
+
                     ClientScript.RegisterStartupScript(this.GetType(), "alert1", "alert('Restore completado con éxito.');", true);
                 }
                 catch (Exception ex)
                 {
-                    
+
                     ClientScript.RegisterStartupScript(this.GetType(), "alert2", $"alert('Error durante el restore: {ex.Message}');", true);
                 }
             }
             else
             {
                 // Mensaje de archivo no seleccionado
-                ClientScript.RegisterStartupScript( this.GetType(), "alert3", "alert('Seleccione un archivo de backup para continuar.');", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alert3", "alert('Seleccione un archivo de backup para continuar.');", true);
             }
+        }
+
+
+        protected void btnGenerarBackup_OnClick(object sender, EventArgs e)
+        {
+            string rutaBackup = Server.MapPath("~/Backups/Backup.bak");
+
+            int resultado = bllBackupService.CreateBackup(rutaBackup);
+
+
+            
+            
+                hlDescargarBackup.NavigateUrl = "~/Backups/Backup.bak";
+                hlDescargarBackup.Visible = true;
+                ClientScript.RegisterStartupScript(this.GetType(), "BackupSuccess", "alert('Backup generado exitosamente');", true);
+           
+
         }
     }
 }

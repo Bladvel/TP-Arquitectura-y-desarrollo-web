@@ -17,5 +17,7 @@ namespace Services
         LibroOPelicula,
         Backup,
         Carrito,
+        ABM,
+        Desconocido,
     }
 }

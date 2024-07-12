@@ -9,6 +9,7 @@ namespace Services
     public enum TipoOperacion
     {
         Login,
-        Logout
+        Logout,
+        Desconocida,
     }
 }

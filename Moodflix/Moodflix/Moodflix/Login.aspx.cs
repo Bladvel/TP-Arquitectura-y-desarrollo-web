@@ -50,12 +50,20 @@ namespace Moodflix
 
                     FormsAuthentication.SetAuthCookie(savedUser.Username, false);
 
-                    if (bllDvh.ValidarDigitoVerificador().Count > 0 || !bllDvv.ValidarDigitoVerificador())
-                    {
+                    List<RegistroInvalido> registrosInvalidos = bllDvh.ValidarDigitoVerificador();
 
+
+                    if (registrosInvalidos.Count > 0 || !bllDvv.ValidarDigitoVerificador())
+                    {
+                        lblInformacion.Text = string.Empty;
                         //Abrir ventana con opciones en caso de que el usuario sea el webmaster
                         if (savedUser.Username.Equals("webmaster"))
                         {
+                            foreach (var registroInvalido in registrosInvalidos)
+                            {
+                                lblInformacion.Text +=
+                                    $"El registro {registroInvalido.DVH.Registro} de la tabla {registroInvalido.DVH.Tabla} fue {registroInvalido.Estado}, </br>";
+                            }
                             // Mostrar modal de inconsistencia
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowModal", "$('#modalInconsistenciaBD').modal('show');", true);
                         }

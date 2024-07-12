@@ -56,9 +56,9 @@
 
                     <div  class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="navbar-nav">
-                            <asp:LinkButton CssClass="nav-link" ID="linkEmociones" Text="Emociones" OnClick="linkEmociones_OnClick" runat="server"> </asp:LinkButton>
-                            <asp:LinkButton CssClass="nav-link" ID="linkLibros" Text="Libros" OnClick="linkLibros_OnClick" runat="server"> </asp:LinkButton>
-                            <asp:LinkButton CssClass="nav-link" ID="linkPeliculas" Text="Peliculas" OnClick="linkPeliculas_OnClick" runat="server"> </asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="linkEmociones" Text="Emociones" OnClick="linkEmociones_OnClick" runat="server" CausesValidation="False"> </asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="linkLibros" Text="Libros" OnClick="linkLibros_OnClick" runat="server" CausesValidation="False"> </asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="linkPeliculas" Text="Peliculas" OnClick="linkPeliculas_OnClick" runat="server" CausesValidation="False"> </asp:LinkButton>
 
 
                         </div>
@@ -128,7 +128,7 @@
                                     <img src="Imagenes/Layer_1.svg" alt="">
                                 </asp:LinkButton>
                                 
-                                <asp:LinkButton CssClass="nav-link" ID="LinkLogout" Text="Log out" OnClick="LinkLogout_OnClick" runat="server"></asp:LinkButton>
+                                <asp:LinkButton CssClass="nav-link" ID="LinkLogout" Text="Log out" OnClick="LinkLogout_OnClick" runat="server" CausesValidation="false"></asp:LinkButton>
                             </asp:PlaceHolder>
 
                             
