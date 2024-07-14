@@ -90,7 +90,8 @@
                         <h5 class="modal-title" id="modalInconsistenciaBDLabel">¡ADVERTENCIA! La base de datos se encuentra en un estado inconsistente.</h5>
                     </div>
                     <div class="modal-body">
-                        <asp:Label ID="lblInformacion" runat="server"></asp:Label>
+                        <asp:Label ID="lblInformacionRegistros" runat="server"></asp:Label>
+                        <asp:Label ID="lblInformacionColumnas" runat="server"></asp:Label>
                         <p>Seleccione una opción:</p>
                         <asp:Button ID="btnRecomponerDV" runat="server" CssClass="btn btn-primary mb-2" Text="Recomponer el dígito verificador" OnClick="btnRecomponerDV_Click" />
                         <asp:Button ID="btnRestaurarBackup" runat="server" CssClass="btn btn-secondary" Text="Restaurar desde un backup" OnClick="btnRestaurarBackup_Click" />

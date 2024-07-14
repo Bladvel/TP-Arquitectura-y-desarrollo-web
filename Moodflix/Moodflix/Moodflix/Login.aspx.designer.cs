@@ -87,13 +87,22 @@ namespace Moodflix
         protected global::System.Web.UI.WebControls.Label lblErrorMessage;
 
         /// <summary>
-        /// lblInformacion control.
+        /// lblInformacionRegistros control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInformacion;
+        protected global::System.Web.UI.WebControls.Label lblInformacionRegistros;
+
+        /// <summary>
+        /// lblInformacionColumnas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInformacionColumnas;
 
         /// <summary>
         /// btnRecomponerDV control.

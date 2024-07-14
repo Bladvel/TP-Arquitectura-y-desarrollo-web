@@ -30,6 +30,106 @@ namespace Moodflix
         BLL.Libro bllLibro = new BLL.Libro();
         BLL.Emocion bllEmocion = new BLL.Emocion();
 
+        //protected void Button1_OnClick(object sender, EventArgs e)
+        //{
+        //    string email = txtEmail.Value;
+        //    string password = txtPassword.Value;
+
+        //    Usuario user = new Usuario();
+        //    user.Email = email;
+        //    user.Password = password;
+
+        //    try
+        //    {
+        //        if (bllUsuario.ValidarUsuario(user))
+        //        {
+
+
+
+        //            var savedUser = bllUsuario.GetUser(user.Email);
+
+        //            FormsAuthentication.SetAuthCookie(savedUser.Username, false);
+
+        //            List<RegistroInvalido> registrosInvalidos = bllDvh.ValidarDigitoVerificador();
+        //            List<ColumnaInvalida> columnasInvalidas = bllDvv.ValidarDigitoVerificador();
+
+        //            if (registrosInvalidos.Count > 0 || columnasInvalidas.Count > 0)
+        //            {
+        //                lblInformacion.Text = string.Empty;
+        //                //Abrir ventana con opciones en caso de que el usuario sea el webmaster
+        //                if (savedUser.Username.Equals("webmaster"))
+        //                {
+        //                    foreach (var registroInvalido in registrosInvalidos)
+        //                    {
+        //                        lblInformacion.Text +=
+        //                            $"El registro {registroInvalido.DVH.Registro} de la tabla {registroInvalido.DVH.Tabla} fue {registroInvalido.Estado}, </br>";
+        //                    }
+        //                    // Mostrar modal de inconsistencia
+        //                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowModal", "$('#modalInconsistenciaBD').modal('show');", true);
+        //                }
+        //                else
+        //                {
+        //                    // Mostrar mensaje de acceso denegado
+        //                    ClientScript.RegisterStartupScript(this.GetType(), "AccessDenied", "alert('No se puede acceder al sistema. Contacte al webmaster.');", true);
+
+        //                    FormsAuthentication.SignOut();
+                            
+
+        //                }
+
+
+        //            }
+        //            else
+        //            {
+        //                Services.Bitacora bitacora = new Services.Bitacora();
+
+        //                bitacora.User = savedUser;
+        //                bitacora.Fecha = DateTime.Now;
+        //                bitacora.Operacion = TipoOperacion.Login;
+        //                bitacora.Modulo = TipoModulo.InicioSesion;
+        //                bllBitacora.Insertar(bitacora);
+
+        //                bllDvh.Recalcular(bllDvh.Listar(),bllBitacora.Listar());
+        //                bllDvv.Recalcular();
+
+        //                string returnUrl = Request.QueryString["ReturnUrl"];
+        //                if (string.IsNullOrEmpty(returnUrl))
+        //                {
+        //                    returnUrl = "~/Emociones.aspx";
+        //                }
+
+
+        //                Response.Redirect(returnUrl);
+        //            }
+
+
+
+                    
+        //        }
+        //    }
+        //    catch (LoginException exception)
+        //    {
+        //        switch (exception.Result)
+        //        {
+        //            case LoginResult.InvalidEmail:
+        //                lblErrorMessage.Text = "El email es incorrecto";
+        //                pnlErrorMessage.Visible = true;
+        //                break;
+        //            case LoginResult.InvalidPassword:
+        //                lblErrorMessage.Text = "La contraseña es incorrecta";
+        //                pnlErrorMessage.Visible = true;
+        //                break;
+
+        //        }
+        //    }
+
+            
+
+            
+        //}
+
+
+
         protected void Button1_OnClick(object sender, EventArgs e)
         {
             string email = txtEmail.Value;
@@ -51,19 +151,34 @@ namespace Moodflix
                     FormsAuthentication.SetAuthCookie(savedUser.Username, false);
 
                     List<RegistroInvalido> registrosInvalidos = bllDvh.ValidarDigitoVerificador();
+                    List<ColumnaInvalida> columnasInvalidas = bllDvv.ValidarDigitoVerificador();
 
-
-                    if (registrosInvalidos.Count > 0 || !bllDvv.ValidarDigitoVerificador())
+                    if (registrosInvalidos.Count > 0 || columnasInvalidas.Count > 0)
                     {
-                        lblInformacion.Text = string.Empty;
-                        //Abrir ventana con opciones en caso de que el usuario sea el webmaster
+                        lblInformacionRegistros.Text = string.Empty;
+
                         if (savedUser.Username.Equals("webmaster"))
                         {
+                            // Mostrar registros inválidos
                             foreach (var registroInvalido in registrosInvalidos)
                             {
-                                lblInformacion.Text +=
-                                    $"El registro {registroInvalido.DVH.Registro} de la tabla {registroInvalido.DVH.Tabla} fue {registroInvalido.Estado}, </br>";
+                                lblInformacionRegistros.Text += $"El registro {registroInvalido.DVH.Registro} de la tabla {registroInvalido.DVH.Tabla} fue {registroInvalido.Estado}, <br/>";
                             }
+
+                            if (columnasInvalidas.Count >0 )
+                            {
+                                lblInformacionColumnas.Text = "Detalles de modificacion: <br/>";
+                            }
+                            // Cruzar registros inválidos con columnas inválidas y mostrar
+                            foreach (var columnaInvalida in columnasInvalidas)
+                            {
+                                var registrosRelacionados = registrosInvalidos.Where(r => r.DVH.Tabla == columnaInvalida.DVV.Tabla).ToList();
+                                foreach (var registro in registrosRelacionados)
+                                {
+                                    lblInformacionColumnas.Text += $"El registro {registro.DVH.Registro} en la columna {columnaInvalida.DVV.Columna} de la tabla {columnaInvalida.DVV.Tabla} fue {columnaInvalida.Estado}, <br/>";
+                                }
+                            }
+
                             // Mostrar modal de inconsistencia
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowModal", "$('#modalInconsistenciaBD').modal('show');", true);
                         }
@@ -71,13 +186,8 @@ namespace Moodflix
                         {
                             // Mostrar mensaje de acceso denegado
                             ClientScript.RegisterStartupScript(this.GetType(), "AccessDenied", "alert('No se puede acceder al sistema. Contacte al webmaster.');", true);
-
                             FormsAuthentication.SignOut();
-                            
-
                         }
-
-
                     }
                     else
                     {
@@ -89,7 +199,7 @@ namespace Moodflix
                         bitacora.Modulo = TipoModulo.InicioSesion;
                         bllBitacora.Insertar(bitacora);
 
-                        bllDvh.Recalcular(bllDvh.Listar(),bllBitacora.Listar());
+                        bllDvh.Recalcular(bllDvh.Listar(), bllBitacora.Listar());
                         bllDvv.Recalcular();
 
                         string returnUrl = Request.QueryString["ReturnUrl"];
@@ -104,7 +214,7 @@ namespace Moodflix
 
 
 
-                    
+
                 }
             }
             catch (LoginException exception)
@@ -123,10 +233,13 @@ namespace Moodflix
                 }
             }
 
-            
 
-            
+
+
         }
+
+
+
 
         protected void LinkInitRegistro_OnClick(object sender, EventArgs e)
         {

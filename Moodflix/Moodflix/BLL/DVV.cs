@@ -92,16 +92,47 @@ namespace BLL
             }
         }
 
-        public bool ValidarDigitoVerificador()
+        //public bool ValidarDigitoVerificador()
+        //{
+        //    List<Services.DVV> dVVs = Listar();
+        //    bool ok = true;
+
+        //    var entitiesAndColumns = new List<(List<object> entities, List<string> columns)>
+        //    {
+        //        (bllLibro.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "DESCRIPCION", "FECHA", "AUTOR", "EDITORIAL", "ID_EMOCION", "URI_RELATIVO", "PRECIO" }),
+        //        (bllEmocion.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "URI_RELATIVO" }),
+        //        (bllPelicula.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "DESCRIPCION", "FECHA", "GENERO", "DIRECTOR" , "ID_EMOCION", "URI_RELATIVO", "PRECIO"}),
+        //        (bllUsuario.Listar().Cast<object>().ToList(), new List<string> { "ID", "USERNAME", "EMAIL", "PASSWORD" }),
+        //        (bllBitacora.Listar().Cast<object>().ToList(), new List<string> { "ID", "ID_USUARIO", "FECHA", "OPERACION", "MODULO" })
+        //    };
+
+        //    foreach (var (entities, columns) in entitiesAndColumns)
+        //    {
+        //        for (int i = 0; i < columns.Count; i++)
+        //        {
+        //            var vectorHASH = ObtenerDV(ConcatenarColumna(entities, columns[i]));
+        //            var dvv = dVVs.FirstOrDefault(d => d.Tabla == entities.First().GetType().Name.ToUpper() && d.Columna == i + 1);
+        //            if (dvv != null && vectorHASH != dvv.DV)
+        //            {
+        //                ok = false;
+        //            }
+        //        }
+        //    }
+
+        //    return ok;
+        //}
+
+
+        public List<ColumnaInvalida> ValidarDigitoVerificador()
         {
             List<Services.DVV> dVVs = Listar();
-            bool ok = true;
+            List<ColumnaInvalida> columnasInvalidas = new List<ColumnaInvalida>();
 
             var entitiesAndColumns = new List<(List<object> entities, List<string> columns)>
             {
                 (bllLibro.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "DESCRIPCION", "FECHA", "AUTOR", "EDITORIAL", "ID_EMOCION", "URI_RELATIVO", "PRECIO" }),
                 (bllEmocion.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "URI_RELATIVO" }),
-                (bllPelicula.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "DESCRIPCION", "FECHA", "GENERO", "DIRECTOR" , "ID_EMOCION", "URI_RELATIVO", "PRECIO"}),
+                (bllPelicula.Listar().Cast<object>().ToList(), new List<string> { "ID", "NOMBRE", "DESCRIPCION", "FECHA", "GENERO", "DIRECTOR", "ID_EMOCION", "URI_RELATIVO", "PRECIO" }),
                 (bllUsuario.Listar().Cast<object>().ToList(), new List<string> { "ID", "USERNAME", "EMAIL", "PASSWORD" }),
                 (bllBitacora.Listar().Cast<object>().ToList(), new List<string> { "ID", "ID_USUARIO", "FECHA", "OPERACION", "MODULO" })
             };
@@ -112,15 +143,23 @@ namespace BLL
                 {
                     var vectorHASH = ObtenerDV(ConcatenarColumna(entities, columns[i]));
                     var dvv = dVVs.FirstOrDefault(d => d.Tabla == entities.First().GetType().Name.ToUpper() && d.Columna == i + 1);
+
                     if (dvv != null && vectorHASH != dvv.DV)
                     {
-                        ok = false;
+                        columnasInvalidas.Add(new ColumnaInvalida { DVV = dvv, Estado = "Modificada" });
+                    }
+                    else if (dvv == null)
+                    {
+                        columnasInvalidas.Add(new ColumnaInvalida { DVV = new Services.DVV { Tabla = entities.First().GetType().Name.ToUpper(), Columna = i + 1, DV = vectorHASH }, Estado = "Eliminada" });
                     }
                 }
             }
 
-            return ok;
+            return columnasInvalidas;
         }
+
+
+
 
         private string ObtenerValorColumna<T>(T entity, string columnName)
         {
