@@ -258,10 +258,11 @@ namespace Moodflix
             List<BE.Emocion> emociones = bllEmocion.Listar();
             List<BE.Libro> libros = bllLibro.Listar();
             List<BE.Usuario> usuarios = bllUsuario.Listar();
+            List<Services.Bitacora> bitacoras = bllBitacora.Listar();
 
             // Listar todos los DVH
             List<DVH> dVHs = bllDvh.Listar();
-            List<DVV> dvvs = bllDvv.Listar();
+            //List<DVV> dvvs = bllDvv.Listar();
 
             // Validar cantidad de registros
             
@@ -269,15 +270,18 @@ namespace Moodflix
             bool emocionesValidas = bllDvh.ValidarCantidadRegistros(emociones, dVHs, "EMOCION");
             bool librosValidos = bllDvh.ValidarCantidadRegistros(libros, dVHs, "LIBRO");
             bool usuariosValidos = bllDvh.ValidarCantidadRegistros(usuarios, dVHs, "USUARIO");
+            bool bitacorasValidas = bllDvh.ValidarCantidadRegistros(bitacoras, dVHs, "BITACORA");
 
-            if ( peliculasValidas && emocionesValidas && librosValidos && usuariosValidos)
+
+            if ( peliculasValidas && emocionesValidas && librosValidos && usuariosValidos && bitacorasValidas)
             {
                 // Recalcular los dígitos verificadores para cada entidad
-               
+                
                 bllDvh.Recalcular(dVHs, peliculas);
                 bllDvh.Recalcular(dVHs, emociones);
                 bllDvh.Recalcular(dVHs, libros); 
                 bllDvh.Recalcular(dVHs, usuarios);
+                bllDvh.Recalcular(dVHs, bitacoras);
 
                 bllDvv.Recalcular();
 
@@ -288,15 +292,15 @@ namespace Moodflix
             {
                 bllDvh.BorrarRegistros();
                 dVHs = bllDvh.Listar();
-
+                
                 // Recalcular los dígitos verificadores para cada entidad después de borrar los registros
                 bllDvh.Recalcular(dVHs, peliculas);
                 bllDvh.Recalcular(dVHs, emociones);
                 bllDvh.Recalcular(dVHs, libros);
                 bllDvh.Recalcular(dVHs, usuarios);
+                bllDvh.Recalcular(dVHs, bitacoras);
 
                 bllDvv.Recalcular();
-
                 ClientScript.RegisterStartupScript(this.GetType(), "Recalculado2", "alert('Se han recalculado los dígitos verificadores');", true);
             }
 

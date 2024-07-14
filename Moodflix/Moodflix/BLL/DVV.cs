@@ -265,7 +265,7 @@ namespace BLL
             }
             else
             {
-                throw new ArgumentException("Yipo de entidad desconocida");
+                throw new ArgumentException("Tipo de entidad desconocida");
             }
         }
 
